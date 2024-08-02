@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="web/images/fav.webp" type="image/png">
+    <link rel="apple-touch-icon" sizes="128x128" href="/web/images/niceicon.webp">
+    <link rel="stylesheet" href="web/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="web/css/slick-full.css">
+    <link rel="stylesheet" href="web/css/bootstrap-short.css">
+    <link rel="stylesheet" href="web/scss/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container-ctn">
+            <div class="header-row d-flex justify-content-between align-items-center">
+                <a href="index.html" class="brand">
+                    <img src="web/images/logo.webp" width="83" height="36" alt="Logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="">Why us</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </nav>
+                <div class="headerBtn align-items-center d-flex">
+                    <a href="" class="btn border-btn">Contact us 
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"> <path d="M16.3086 5.3418L4.99488 16.6555" stroke="white" stroke-width="2"/> <path d="M6.46116 5.78298C10.2744 7.91922 12.5865 8.00493 16.2414 5.41128" stroke="white" stroke-width="2"/> <path d="M15.8713 15.1931C13.7351 11.3799 13.6494 9.06784 16.243 5.41294" stroke="white" stroke-width="2"/> </svg></i>
+                    </a>
+                </div>
+
+                <a class="navbar-toggler" type="button" data-bs-toggle="offcanvas" href="#mobileOffcanvasExample"
+                    role="button" aria-controls="offcanvasExample">
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="18" height="1.44828" rx="0.724138" fill="#fff" />
+                        <rect y="6.27588" width="13.5" height="1.44828" rx="0.724138" fill="#fff" />
+                        <rect y="12.5518" width="15.75" height="1.44828" rx="0.724138" fill="#fff" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner position-relative">
+        <!-- <picture><img src="web/images/home/banner.jpg" width="1920" height="692" alt="" /></picture> -->
+        <div class="video-container">
+            <video width="" height="" autoplay loop muted preload="metadata" poster="web/images/home/banner.jpg" class="w-100  videoBanner" >
+                <source src="web/video/banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container-ctn">
+            <div class="bannerText">
+                <div class="banner-text-item">
+                    <span>You need</span>
+                    <strong><h1>Talented Devs</h1></strong>
+                    <p>We want to help you find them</p>
+                    <a href="" class="btn themeBtn w-fit m-auto bg-white  align-items-center">Hire dev
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"> <path d="M16.8145 5.00781L5.50074 16.3215" stroke="black" stroke-width="2"/> <path d="M6.96702 5.449C10.7803 7.58523 13.0923 7.67094 16.7472 5.07729" stroke="black" stroke-width="2"/> <path d="M16.3772 14.8592C14.2409 11.0459 14.1552 8.73386 16.7489 5.07896" stroke="black" stroke-width="2"/> </svg></i>
+                    </a>
+                </div>
+                <div class="banner-text-item">
+                    <span>You need</span>
+                    <strong><h1>Talented Designers</h1></strong>
+                    <p>We want to help you find them</p>
+                    <a href="" class="btn themeBtn w-fit m-auto bg-white align-items-center">Hire dev 
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"> <path d="M16.8145 5.00781L5.50074 16.3215" stroke="black" stroke-width="2"/> <path d="M6.96702 5.449C10.7803 7.58523 13.0923 7.67094 16.7472 5.07729" stroke="black" stroke-width="2"/> <path d="M16.3772 14.8592C14.2409 11.0459 14.1552 8.73386 16.7489 5.07896" stroke="black" stroke-width="2"/> </svg></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="logoSection commonPadding text-center">
+        <p>Developers who honed their skills with</p>
+        <div class="container-logo ">
+            <div class="logoSlider" aria-label="Company logos">
+                <div>
+                    <picture>
+                        <img src="web/images/clients/zoom.webp" width="160" height="36" alt="Zoom" class="img-fluid  ">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <img src="web/images/clients/netflix.webp" width="160" height="43" alt="Netflix" class="img-fluid  ">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <img src="web/images/clients/samsung.webp" width="160" height="25" alt="Samsung" class="img-fluid  ">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <img src="web/images/clients/google.webp" width="160" height="52" alt="Google" class="img-fluid  ">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <img src="web/images/clients/stripe.webp" width="160" height="67" alt="Stripe" class="img-fluid  ">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <img src="web/images/clients/stripe.webp" width="160" height="67" alt="Stripe" class="img-fluid  ">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <img src="web/images/clients/zoom.webp" width="160" height="36" alt="Zoom" class="img-fluid  ">
+                    </picture>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="product  commonPadding-80">
+        <div class="container-ctn">
+            <h2>Dedicated remote devs
+            </h2>
+            <p><span>100%</span> attention to your product</p>
+            <div class="d-flex flex-wrap">
+                <div>
+                    <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
+                    <h3>Quality</h3>
+                    <p> Delivering top-notch, industry-standard
+                        work.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
+                    <h3>Sourcing and Matching</h3>
+                    <p>Perfectly matched, proven candidates.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
+                    <h3>Flexible to Your Needs</h3>
+                    <p>Adapts to your specific requirements.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
+                    <h3>Result-Driven</h3>
+                    <p>Focused on measurable success.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
+                    <h3>Time to Perform</h3>
+                    <p>Quick start, fast performance improvements.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
+                    <h3>Scalable Solutions</h3>
+                    <p>Easily adjust team size as needed.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
+                    <h3>Continuous Support</h3>
+                    <p>Ongoing project support.</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
+                    <h3>Best Practices</h3>
+                    <p>Adhering to world-class industry standards.</p>
+                </div>
+            </div>
+            <div class="our-speciality justify-content-center justify-content-lg-between align-items-center">
+                <div>
+                    <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
+                    <p>No hidden fees, just clear, fair pricing</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
+                    <p>Free and unlimited replacement of the dev</p>
+                </div>
+                <div>
+                    <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
+                    <p>Cancel any time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="services  commonPadding-80">
+        <div class="container-ctn">
+            <div class="d-flex justify-content-between">
+                <div class="gradientBg">
+                    <picture><img src="web/images/home/box-bg.webp" width="614" height="418" alt=""></picture>
+                    <div>
+                        <h2>Path to Success</h2>
+                        <a href="">Try For Free  <i><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"> <path d="M25.9199 7.75586L7.81799 25.8578" stroke="white" stroke-width="2"/> <path d="M10.1636 8.46136C16.2649 11.8793 19.9641 12.0165 25.8119 7.86664" stroke="white" stroke-width="2"/> <path d="M25.2183 23.5161C21.8003 17.4148 21.6632 13.7156 25.8131 7.86774" stroke="white" stroke-width="2"/> </svg></i></a>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div>Step 1</div>
+                        <div>
+                            <strong>Apply for FREE and Describe Your Needs</strong>
+                            <p>Share details about your project and the skills you require.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Step 2</div>
+                        <div>
+                            <strong>Get Matched: </strong>
+                            <p>Choose your pricing plan, and we’ll match you with compliant and proven developers that fit your hiring preferences.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Step 3</div>
+                        <div>
+                            <strong>Start Working: </strong>
+                            <p>Start your project immediately with confidence and flexibility. Enjoy a clear start and straightforward monthly pricing.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="float-menu">
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="top-btn"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none"> <path d="M7.75391 0.246094L7.7539 16.2461" stroke="white" stroke-width="2"/> <path d="M1.10156 7.52223C5.30851 6.33637 7.00395 4.76214 7.75437 0.34375" stroke="white" stroke-width="2"/> <path d="M14.4082 7.52027C10.2013 6.33442 8.50581 4.76019 7.7554 0.341797" stroke="white" stroke-width="2"/> </svg></button>
+            <div>
+                <button class="btn float-btn active">Developers</button>
+                <button class="btn float-btn">Designers</button>
+                <button class="btn hire-btn">Hire 
+                    <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"> <path d="M16.3086 5.3418L4.99488 16.6555" stroke="white" stroke-width="2"/> <path d="M6.46116 5.78298C10.2744 7.91922 12.5865 8.00493 16.2414 5.41128" stroke="white" stroke-width="2"/> <path d="M15.8713 15.1931C13.7351 11.3799 13.6494 9.06784 16.243 5.41294" stroke="white" stroke-width="2"/> </svg></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- menu mobile -->
+    <div class="offcanvas offcanvas-start mobile_left_menu " tabindex="-1" id="mobileOffcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" role="dialog">
+        <div class="offcanvas-header">
+            <a href="index.html" class=""><img src="web/images/logo.webp" alt="Logo" width="110" height="90"
+                    class="h-auto " style="filter: invert(1);"></a>
+
+            <button aria-controls="offcanvasExample" role="button" href="#mobileOffcanvasExample"
+                data-bs-toggle="offcanvas" class="btn-close text-reset" type="button"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="web/js/countup.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js"></script>
+    <script src="web/js/jquery.star-rating-svg.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" ></script> -->
+    <script src="web/js/script.js"></script>
+
+</body>
+
+</html>

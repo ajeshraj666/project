@@ -1,0 +1,611 @@
+.brand {
+  @include min(992) {
+    // width: 16.28%;
+  }
+  @include min(1440){
+    min-width: 83px;
+  }
+  @include min(1900){
+    min-width: 120px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: rgba(21, 21, 21, 0.3);
+  box-shadow: 0px 2px 4px 0px rgba(22, 40, 2, 0.1);
+  backdrop-filter: blur(14.040983200073242px);
+  padding: 0px 0px;
+  @include min(992) {
+    padding: 14px 0px;
+  }
+  @include min(1200) {
+    padding: 16px 0px;
+  }
+  @include min(1440) {
+    padding: 18px 0px;
+  }
+}
+a.brand p {
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  @include min(1200) {
+    font-size: 20px;
+  }
+}
+
+.header-row {
+  @include max(991) {
+    padding: 17px 0px;
+  }
+  ul {
+    display: flex;
+    gap: 5px;
+    @include min(1200){
+      gap: 12px;
+    }
+    @include min(1900) {
+      gap: 32px;
+    }
+    a {
+      font-family: $secondary-font;
+      font-weight: 400;
+      color: $white;
+      padding: 0px 10px;
+      @include min(1200) {
+        padding: 7px 15px;
+      }
+      @include min(1440) {
+        padding: 8px 16px;
+      }
+      // @include min(1600) {
+      //   padding: 0px 18px;
+      // }
+      // @include min(1900) {
+      //   padding: 0px 20px;
+      // }
+    }
+
+    > .drop-downs {
+      > .mega > ul > li {
+        &:first-child {
+          margin-top: 10px;
+          @include min(1200) {
+            margin-top: 14px;
+          }
+          @include min(1600) {
+            margin-top: 16px;
+          }
+          @include min(1900) {
+            margin-top: 20px;
+          }
+        }
+        &:last-child {
+          margin-bottom: 10px;
+          @include min(1200) {
+            margin-bottom: 14px;
+          }
+          @include min(1600) {
+            margin-bottom: 16px;
+          }
+          @include min(1900) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    li {
+      &.drop-downs {
+        //  position: relative;
+        a {
+          padding-right: 20px;
+          margin-right: 10px;
+        }
+        .mega {
+          padding-top: 25px;
+          @include min(1350) {
+            padding-top: 35px;
+          }
+          @include min(1440) {
+            padding-top: 58px;
+          }
+        }
+        .mega-menu,
+        .mega {
+          position: absolute;
+
+          z-index: 310;
+          width: fit-content;
+          gap: 10px;
+
+          top: 0;
+          width: fit-content;
+          display: none;
+
+          ul {
+            // overflow: hidden;
+            display: flex;
+
+            border-radius: 10px;
+            background-color: $white;
+            box-shadow: 0px 3px 2px #0000002e;
+            border: 1px solid #ececec;
+
+            li {
+              a {
+                padding: 12px 10px;
+
+                @include min(1200) {
+                  padding: 14px 12px;
+                }
+                @include min(1350) {
+                  padding: 16px 14px;
+                }
+                @include min(1600) {
+                  padding: 18px 16px;
+                }
+                @include min(1900) {
+                  padding: 20px 18px;
+                }
+              }
+              &:last-child {
+                border-bottom: unset;
+              }
+            }
+          }
+          a {
+            padding: 0;
+            margin: 0;
+            padding-right: 35px;
+          }
+        }
+        .mega {
+          > ul {
+            width: 100%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            > li {
+            }
+          }
+        }
+        .mega-menu {
+          position: absolute;
+          left: 100%;
+          top: 0;
+          margin-top: 0;
+          margin-left: 0px;
+
+          ul {
+            flex-wrap: wrap;
+            padding: 10px;
+            width: 100%;
+            @include min(992) {
+              padding: 12px 10px;
+            }
+            @include min(1200) {
+              padding: 14px 12px;
+            }
+            @include min(1350) {
+              padding: 16px 14px;
+            }
+            @include min(1600) {
+              padding: 15px 13px;
+            }
+            @include min(1900) {
+              padding: 20px 18px;
+            }
+          }
+          li {
+            width: 50%;
+          }
+          a {
+            border-radius: 10px;
+            height: fit-content;
+            height: 100%;
+            &::before {
+              display: flex;
+              align-items: center;
+              content: "+";
+            }
+            gap: 20px;
+            &:hover {
+              background-color: $primaryColor;
+              color: $white;
+            }
+          }
+        }
+        > .mega {
+          a {
+            border: unset !important;
+          }
+        }
+
+        @include min(1200) {
+          > ul {
+            margin-top: 151px;
+          }
+        }
+        @include min(1440) {
+          > ul {
+            margin-top: 151px;
+          }
+        }
+
+        &:hover {
+          .mega {
+            display: flex;
+          }
+        }
+        li:hover {
+        }
+      }
+      .mega {
+        @include min(992) {
+          margin-top: 109px;
+          min-width: 200px;
+          margin-left: -100px;
+        }
+        @include min(1200) {
+          margin-top: 110px;
+          min-width: 300px;
+          margin-left: -170px;
+        }
+        @include min(1350) {
+          margin-top: 110px;
+          min-width: 300px;
+          margin-left: -170px;
+        }
+        @include min(1440) {
+          margin-top: 103px;
+        }
+        @include min(1600) {
+          min-width: 380px;
+          margin-top: 117px;
+        }
+        @include min(1900) {
+          margin-top: 131px;
+        }
+      }
+      .mega-menu {
+        @include min(992) {
+          min-width: 400px;
+        }
+        @include min(1200) {
+          min-width: 490px;
+        }
+        @include min(1350) {
+          min-width: 570px;
+        }
+        @include min(1440) {
+          min-width: 597px;
+        }
+        @include min(1600) {
+          min-width: 597px;
+        }
+        @include min(1900) {
+          min-width: 707px;
+        }
+      }
+      .mega {
+        > ul > li {
+          > a {
+            &::before {
+              @extend .position;
+              background-color: $primaryColor;
+              border-radius: 10px;
+              left: 0;
+              width: 6px;
+
+              @include min(1200) {
+                width: 7px;
+              }
+              @include min(1440) {
+                width: 8px;
+              }
+              @include min(1600) {
+                width: 9px;
+              }
+              @include min(1900) {
+                width: 10px;
+              }
+            }
+          }
+          &:hover {
+            a {
+              &::before {
+                height: 100%;
+              }
+            }
+          }
+
+          border-bottom: 1px solid #ececec;
+          width: 100%;
+          margin: auto;
+
+          &:last-child {
+            border-bottom: unset;
+          }
+        }
+      }
+      .has-sub-menu {
+        position: relative;
+        > a {
+          &::after {
+            @include min(992) {
+              width: 15px;
+              height: 15px;
+              right: 12px;
+              background-size: 12px;
+            }
+            @include min(1200) {
+              right: 13px;
+              background-size: 13px;
+            }
+            @include min(1440) {
+              right: 14px;
+              background-size: 14px;
+            }
+            @include min(1900) {
+              right: 15px;
+              background-size: 15px;
+            }
+
+            @extend .position;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><g clip-path="url(%23clip0_1272_3009)"><path d="M0.941832 3.80183C1.06495 3.80167 1.18687 3.82588 1.30058 3.87308C1.41429 3.92028 1.51752 3.98953 1.60433 4.07683L6.39996 8.87183C6.54505 9.01697 6.71732 9.1321 6.90692 9.21065C7.09652 9.2892 7.29973 9.32962 7.50496 9.32962C7.71018 9.32962 7.9134 9.2892 8.10299 9.21065C8.29259 9.1321 8.46486 9.01697 8.60996 8.87183L13.3981 4.08308C13.4846 3.99354 13.588 3.92212 13.7024 3.87299C13.8168 3.82385 13.9398 3.79799 14.0643 3.79691C14.1887 3.79583 14.3122 3.81955 14.4274 3.86669C14.5426 3.91383 14.6473 3.98344 14.7353 4.07146C14.8234 4.15949 14.893 4.26416 14.9401 4.37938C14.9872 4.49459 15.011 4.61804 15.0099 4.74252C15.0088 4.867 14.9829 4.99002 14.9338 5.1044C14.8847 5.21878 14.8132 5.32223 14.7237 5.40871L9.93558 10.1975C9.29052 10.8413 8.41636 11.2029 7.50496 11.2029C6.59355 11.2029 5.71939 10.8413 5.07433 10.1975L0.278707 5.40246C0.147509 5.27134 0.0581526 5.10426 0.0219437 4.92235C-0.0142651 4.74043 0.00430124 4.55187 0.0752934 4.38051C0.146286 4.20915 0.266513 4.0627 0.420762 3.95969C0.575011 3.85669 0.75635 3.80175 0.941832 3.80183Z" fill="%23575757"/></g><defs><clipPath id="clip0_1272_3009"><rect width="15" height="15" fill="white"/></clipPath></defs></svg>');
+            background-repeat: no-repeat;
+          }
+          &:hover {
+            &::after {
+              background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><g clip-path="url(%23clip0_1272_3009)"><path d="M0.941832 3.80183C1.06495 3.80167 1.18687 3.82588 1.30058 3.87308C1.41429 3.92028 1.51752 3.98953 1.60433 4.07683L6.39996 8.87183C6.54505 9.01697 6.71732 9.1321 6.90692 9.21065C7.09652 9.2892 7.29973 9.32962 7.50496 9.32962C7.71018 9.32962 7.9134 9.2892 8.10299 9.21065C8.29259 9.1321 8.46486 9.01697 8.60996 8.87183L13.3981 4.08308C13.4846 3.99354 13.588 3.92212 13.7024 3.87299C13.8168 3.82385 13.9398 3.79799 14.0643 3.79691C14.1887 3.79583 14.3122 3.81955 14.4274 3.86669C14.5426 3.91383 14.6473 3.98344 14.7353 4.07146C14.8234 4.15949 14.893 4.26416 14.9401 4.37938C14.9872 4.49459 15.011 4.61804 15.0099 4.74252C15.0088 4.867 14.9829 4.99002 14.9338 5.1044C14.8847 5.21878 14.8132 5.32223 14.7237 5.40871L9.93558 10.1975C9.29052 10.8413 8.41636 11.2029 7.50496 11.2029C6.59355 11.2029 5.71939 10.8413 5.07433 10.1975L0.278707 5.40246C0.147509 5.27134 0.0581526 5.10426 0.0219437 4.92235C-0.0142651 4.74043 0.00430124 4.55187 0.0752934 4.38051C0.146286 4.20915 0.266513 4.0627 0.420762 3.95969C0.575011 3.85669 0.75635 3.80175 0.941832 3.80183Z" fill="%23575757"/></g><defs><clipPath id="clip0_1272_3009"><rect width="15" height="15" fill="white"/></clipPath></defs></svg>');
+              background-repeat: no-repeat;
+              transform: rotate(-90deg);
+              @include min(992) {
+                background-size: 12px;
+              }
+              @include min(1200) {
+                background-size: 13px;
+              }
+              @include min(1440) {
+                background-size: 14px;
+              }
+              @include min(1900) {
+                background-size: 15px;
+              }
+            }
+          }
+        }
+        &:hover {
+          .mega-menu {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    border: 1px solid white;
+    display: flex;
+    color: $white;
+    align-items: center;
+    border-radius: 8px;
+     gap: 5px;
+    padding: 4px 10px;
+    @include min(768){
+      gap: 10px;
+      padding: 5px 16px;
+    }
+    @include min(992){
+      padding: 6px 18px;
+    }
+    @include min(1200){
+      padding: 8px 20px;
+    }
+    @include min(1900){
+      padding: 12px 30px;
+    }
+    &:hover {
+      background-color: #fff;
+      color: $black;
+
+      path {
+        stroke: $black;
+      }
+    }
+    svg{
+      @include max(575){
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+  nav{
+    @include max(991){
+      display: none;
+    }
+  }
+  .headerBtn {
+    height: fit-content;
+    gap: 10px;
+    @include max(991) {
+      width: 79%;
+      justify-content: flex-end;
+    }
+    @include max(767){
+      width: 66%;
+
+    }
+    @include min(992) {
+      gap: 20px;
+    }
+    @include min(1200) {
+      gap: 120px;
+    }
+    @include min(1440) {
+      gap: 120px;
+    }
+    @include min(1600) {
+      gap: 120px;
+    }
+    @include min(1900) {
+      gap: 100px;
+    }
+
+    // nav {
+  
+    //   > ul > li {
+    //     // position: relative;
+    //     display: flex;
+    //     align-items: center;
+    //     height: 65px;
+       
+    //     @include min(992) {
+    //       height: 76px;
+    //     }
+    //     @include min(1200) {
+    //       height: 80px;
+    //     }
+    //     @include min(1440) {
+    //       height: 100px;
+    //     }
+    //     @include min(1600) {
+    //       height: 110px;
+    //     }
+    //     @include min(1900) {
+    //       height: 120px;
+    //     }
+    //     a {
+    //       position: relative;
+    //       height: 100%;
+    //       display: flex;
+    //       align-items: center;
+    //       border-left: 1px solid transparent;
+    //       border-right: 1px solid transparent;
+    //     }
+    //     > a {
+    //       &::before {
+    //         @extend .position;
+    //         width: 0;
+    //         height: 7px;
+    //         background-color: $primaryColor;
+    //         bottom: 0;
+    //         left: 50%;
+    //         transform: translateX(-50%);
+    //         transition: 0.5s ease all;
+    //         @include min(1600) {
+    //           height: 8px;
+    //         }
+    //         @include min(1900) {
+    //           height: 10px;
+    //         }
+    //       }
+    //       &:hover {
+    //         border-left: 1px solid #f5f5f5;
+    //         border-right: 1px solid #f5f5f5;
+
+    //         &::before {
+    //           width: 100%;
+    //           transition: 0.5s ease all;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  }
+  .navbar-toggler {
+    svg{
+      @include max(575){
+        width: 26px;
+        height: 32px;
+      }
+    }
+    @include min(992) {
+      display: none;
+    }
+  }
+  .drop-downs {
+    // position: relative;
+    a {
+      padding-right: 16px;
+
+      @include min(1600) {
+        padding-right: 18px;
+      }
+      @include min(1900) {
+        padding-right: 20px;
+      }
+    }
+
+    > a {
+      position: relative;
+      &::after {
+        @extend .position;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none"><g clip-path="url(%23clip0_1089_239)"><path d="M0.943785 3.80183C1.0669 3.80167 1.18883 3.82588 1.30253 3.87308C1.41624 3.92028 1.51948 3.98953 1.60628 4.07683L6.40191 8.87183C6.54701 9.01697 6.71927 9.1321 6.90887 9.21065C7.09847 9.2892 7.30168 9.32962 7.50691 9.32962C7.71213 9.32962 7.91535 9.2892 8.10495 9.21065C8.29455 9.1321 8.46681 9.01697 8.61191 8.87183L13.4 4.08308C13.4865 3.99354 13.59 3.92212 13.7043 3.87299C13.8187 3.82385 13.9417 3.79799 14.0662 3.79691C14.1907 3.79583 14.3142 3.81955 14.4294 3.86669C14.5446 3.91383 14.6493 3.98344 14.7373 4.07146C14.8253 4.15949 14.8949 4.26416 14.9421 4.37938C14.9892 4.49459 15.0129 4.61804 15.0118 4.74252C15.0108 4.867 14.9849 4.99002 14.9358 5.1044C14.8866 5.21878 14.8152 5.32223 14.7257 5.40871L9.93753 10.1975C9.29248 10.8413 8.41831 11.2029 7.50691 11.2029C6.59551 11.2029 5.72134 10.8413 5.07628 10.1975L0.28066 5.40246C0.149462 5.27134 0.0601057 5.10426 0.0238969 4.92235C-0.012312 4.74043 0.00625437 4.55187 0.0772465 4.38051C0.148239 4.20915 0.268466 4.0627 0.422715 3.95969C0.576964 3.85669 0.758303 3.80175 0.943785 3.80183Z" fill="%236A2875"/></g><defs><clipPath id="clip0_1089_239"><rect width="15" height="15" fill="white"/></clipPath></defs></svg>');
+        width: 13px;
+        height: 15px;
+        // bottom: 6px;
+        transform: translateY(1px);
+        background-size: 11px;
+        right: 0;
+        // bottom: 6px;
+        background-repeat: no-repeat;
+        @include min(1200) {
+          background-size: 12px;
+          transform: translateY(3px);
+        }
+        @include min(1600) {
+          transform: translateY(2px);
+          background-size: 14px;
+        }
+        @include min(1900) {
+          width: 15px;
+          background-size: 15px;
+          // bottom: 11px;
+        }
+      }
+    }
+  }
+}
+.social {
+  @include max(767) {
+    display: none !important;
+  }
+}
+.scrolled .top-header {
+  display: none !important;
+}
+.scrolled {
+  position: fixed;
+  z-index: 99999999;
+  width: 100%;
+  background-color: #000;
+  .header-rowul li.drop-downs .mega {
+    @include min(992) {
+      margin-top: 28px;
+    }
+    @include min(1200) {
+      margin-top: 61px;
+    }
+    @include min(1350) {
+      margin-top: 56px;
+    }
+    @include min(1440) {
+      margin-top: 51px;
+    }
+    @include min(1600) {
+      margin-top: 61px;
+    }
+    @include min(1900) {
+      margin-top: 71px;
+    }
+  }
+}

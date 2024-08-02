@@ -1,0 +1,135 @@
+.btn {
+  font-weight: 700;
+  font-family: $secondary-font;
+  &.themeBtn {
+    svg{
+      @include max(575){
+        width: 17px;
+        height: 17px;
+      }
+    }
+    &.border-btn {
+      //   img {
+      //     filter: invert(1);
+      //   }
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        // img {
+        //   filter: invert(0);
+        // }
+        path {
+          stroke: #000;
+        }
+      }
+    }
+    &.bg-white {
+      background-color: $white;
+      color: #000;
+      gap: 5px;
+      @include min(768){
+        gap: 10px;
+
+      }
+      path {
+        stroke: #000;
+      }
+      &:hover {
+        background-color: transparent;
+        color: $white;
+        // img {
+        //   filter: invert(1);
+        // }
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+    display: flex;
+    gap: 10px;
+    height: fit-content;
+    padding: 3px 13px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    @include min(768) {
+      padding: 6px 20px;
+    }
+    @include min(992) {
+      padding: 4px 15px;
+    }
+    @include min(1200) {
+      padding: 8px 18.99px 8px 22px;
+    }
+    @include min(1360) {
+      padding: 10px 20.99px 10px 25px;
+    }
+    @include min(1440) {
+      padding: 12px 24.99px 12px 29px;
+    }
+    @include min(1900) {
+      padding: 16px 34.99px 16px 39px;
+    }
+    //   @include min(1600) {
+    //     padding: 6px 22px;
+    //   }
+    //   @include min(1900) {
+    //     padding: 6px 25px;
+    //   }
+
+    svg{
+      @include min(1900){
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+  &.themeBtnS {
+    transition: 0.5s ease all;
+    &:hover {
+      transition: 0.5s ease all;
+    }
+  }
+  &.themeBtnp {
+    background-color: $primaryColor;
+    position: relative;
+
+    svg {
+      transition: 0.5s ease all;
+    }
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $secondaryColor;
+      width: 33px;
+      svg {
+        @include max(575) {
+          width: 6px;
+          height: auto;
+        }
+      }
+      @include min(768) {
+        width: 45px;
+      }
+      @include min(1200) {
+        width: 55px;
+      }
+      @include min(1900) {
+        width: 70px;
+      }
+    }
+    &:hover {
+      background-color: $secondaryColor;
+      transition: 0.5s ease all;
+      svg {
+        transition: 0.5s ease all;
+        transform: translateX(5px);
+      }
+    }
+  }
+}
