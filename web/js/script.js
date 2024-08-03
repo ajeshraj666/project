@@ -59,6 +59,7 @@ $(document).ready(function () {
 // });
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
   const video = document.getElementById('videoBanner');
   if (video) {
@@ -73,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(video);
   }
 });
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const specialityDivs = document.querySelectorAll('.our-speciality > div');
   specialityDivs.forEach((div, index) => {
