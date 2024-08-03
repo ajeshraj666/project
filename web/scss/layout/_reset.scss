@@ -9,13 +9,10 @@
   font-size: 14px;
   line-height: 24px;
   @include min(992) {
-    font-size: 11px;
-    line-height: 18px;
-  }
-  @include min(1200) {
     font-size: 14px;
     line-height: 20px;
   }
+
   @include min(1440) {
     font-size: 16px;
     line-height: 20px;
@@ -32,16 +29,7 @@
 body {
   overflow-x: hidden;
 }
-.container-Foothead {
-  max-width: 90%;
-  margin-left: auto;
-  @include max(575) {
-    margin-right: auto;
-  }
-  @include min(576) {
-    max-width: 94.9%;
-  }
-}
+
 .container-ctn {
   max-width: 95%;
   margin-right: auto;
@@ -536,61 +524,7 @@ select {
   }
 }
 
-.head {
-  span {
-    font-weight: 600;
-    display: block;
-    color: $primaryColor;
-    letter-spacing: 1px;
-    margin-bottom: 0px;
-    text-transform: uppercase;
-    @include min(768) {
-      margin-bottom: 2px;
-      font-size: 11.5px;
-    }
-    @include min(992) {
-      margin-bottom: 10px;
-    }
-    @include min(1200) {
-      letter-spacing: 2px;
-      margin-bottom: 15px;
-      font-size: 14.6px;
-    }
-    @include min(1440) {
-      font-size: 15.5px;
-    }
-    @include min(1600) {
-      letter-spacing: 2.2px;
-      margin-bottom: 20px;
-      font-size: 17.5px;
-    }
-    @include min(1900) {
-      font-size: 22px;
-    }
-  }
-  h2 {
-    margin-bottom: 15px;
-    color: $black;
-    @include min(768) {
-      margin-bottom: 10px;
-    }
-    @include min(992) {
-      margin-bottom: 0;
-    }
-    @include min(1200) {
-      margin-bottom: 12px;
-    }
-    @include min(1440) {
-      margin-bottom: 16px;
-    }
-    @include min(1600) {
-      margin-bottom: 18px;
-    }
-    @include min(1900) {
-      margin-bottom: 20px;
-    }
-  }
-}
+
 
 .typing-demo {
   width: 185px;
@@ -621,65 +555,6 @@ select {
   }
 }
 
-.heading {
-  p,
-  p span {
-    font-size: 15px;
-    @include min(768) {
-      font-size: 13px;
-    }
-    @include min(992) {
-      font-size: 18px;
-    }
-    @include min(1200) {
-      font-size: 20px;
-    }
-    @include min(1600) {
-      font-size: 22px;
-    }
-    @include min(1900) {
-      font-size: 24px;
-    }
-  }
-  p {
-    color: $black;
-    margin-bottom: 8px;
-    @include min(992) {
-      margin-bottom: 14px;
-    }
-    @include min(1200) {
-      margin-bottom: 16px;
-    }
-    @include min(1600) {
-      margin-bottom: 18px;
-    }
-    @include min(1900) {
-      margin-bottom: 20px;
-    }
-    span {
-      color: $primaryColor;
-      font-weight: 700;
-    }
-  }
-  h2 {
-    color: $black;
-    margin-bottom: 15px;
-    @include min(1200) {
-      margin-bottom: 20px;
-    }
-    @include min(1600) {
-      margin-bottom: 30px;
-    }
-    @include min(1900) {
-      margin-bottom: 40px;
-    }
-  }
-  br {
-    @include max(767) {
-      display: none;
-    }
-  }
-}
 .navbar-toggler:focus {
   border: unset;
   outline: unset;
@@ -750,4 +625,16 @@ input[type="date"] {
 .file-cta {
   display: flex;
   align-items: center;
+}
+
+
+.head {
+  h2{
+    margin-bottom: 24px;
+  }
+  p{
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 63.13px;
+  }
 }

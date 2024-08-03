@@ -411,14 +411,28 @@ a.brand p {
     @include min(1900){
       padding: 12px 30px;
     }
-    &:hover {
+    &::before{
+      @extend .position;
+      height: 100%;
+      left: 0;
+      transition:  0.5s ease all ;
+      width: 0%;
+      z-index: -1;
       background-color: #fff;
-      color: $black;
+    }
 
+    &:hover {
+      transition:0.5s ease all ;
+      color: #000;
+      &::before{
+        width: 100%;
+        transition:0.5s ease all ;
+      }
       path {
         stroke: $black;
       }
     }
+   
     svg{
       @include max(575){
         width: 17px;

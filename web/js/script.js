@@ -84,3 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
+// ======================Testimonial Rating==========================
+$(document).ready(function () {
+  $(".my-rating-readonly").starRating({
+    starSize: 19,
+    initialRating: 5,
+    useFullStars: true,
+    readOnly: true,
+    starShape: 'rounded',
+  });
+});

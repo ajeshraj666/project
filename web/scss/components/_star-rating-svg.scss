@@ -37,10 +37,19 @@
 }
 #star-rating {
   display: flex;
-  gap: 2px;
+  gap: 6px;
+  @include min(768){
+    gap: 5.5px;
+  }
+  @include min(992){
+    gap: 8.5px;
+  }
+  @include min(1200){
+    gap: 10.5px;
+  }
 }
 @include max(575){
   .jq-star {
-    width: 13px!important;
+    width: 16px!important;
   }
 }
