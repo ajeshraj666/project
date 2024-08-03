@@ -472,66 +472,6 @@ a.brand p {
       gap: 100px;
     }
 
-    // nav {
-  
-    //   > ul > li {
-    //     // position: relative;
-    //     display: flex;
-    //     align-items: center;
-    //     height: 65px;
-       
-    //     @include min(992) {
-    //       height: 76px;
-    //     }
-    //     @include min(1200) {
-    //       height: 80px;
-    //     }
-    //     @include min(1440) {
-    //       height: 100px;
-    //     }
-    //     @include min(1600) {
-    //       height: 110px;
-    //     }
-    //     @include min(1900) {
-    //       height: 120px;
-    //     }
-    //     a {
-    //       position: relative;
-    //       height: 100%;
-    //       display: flex;
-    //       align-items: center;
-    //       border-left: 1px solid transparent;
-    //       border-right: 1px solid transparent;
-    //     }
-    //     > a {
-    //       &::before {
-    //         @extend .position;
-    //         width: 0;
-    //         height: 7px;
-    //         background-color: $primaryColor;
-    //         bottom: 0;
-    //         left: 50%;
-    //         transform: translateX(-50%);
-    //         transition: 0.5s ease all;
-    //         @include min(1600) {
-    //           height: 8px;
-    //         }
-    //         @include min(1900) {
-    //           height: 10px;
-    //         }
-    //       }
-    //       &:hover {
-    //         border-left: 1px solid #f5f5f5;
-    //         border-right: 1px solid #f5f5f5;
-
-    //         &::before {
-    //           width: 100%;
-    //           transition: 0.5s ease all;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
   }
   .navbar-toggler {
     svg{
@@ -589,37 +529,6 @@ a.brand p {
     }
   }
 }
-.social {
-  @include max(767) {
-    display: none !important;
-  }
-}
-.scrolled .top-header {
-  display: none !important;
-}
-.scrolled {
-  position: fixed;
-  z-index: 99999999;
-  width: 100%;
-  background-color: #000;
-  .header-rowul li.drop-downs .mega {
-    @include min(992) {
-      margin-top: 28px;
-    }
-    @include min(1200) {
-      margin-top: 61px;
-    }
-    @include min(1350) {
-      margin-top: 56px;
-    }
-    @include min(1440) {
-      margin-top: 51px;
-    }
-    @include min(1600) {
-      margin-top: 61px;
-    }
-    @include min(1900) {
-      margin-top: 71px;
-    }
-  }
-}
+
+
+

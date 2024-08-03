@@ -156,44 +156,44 @@
             <h2>Dedicated remote devs
             </h2>
             <p><span>100%</span> attention to your product</p>
-            <div class="d-flex flex-wrap">
-                <div>
+            <div class="product-list d-sm-flex flex-wrap">
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
                     <h3>Quality</h3>
                     <p> Delivering top-notch, industry-standard
                         work.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
                     <h3>Sourcing and Matching</h3>
                     <p>Perfectly matched, proven candidates.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
                     <h3>Flexible to Your Needs</h3>
                     <p>Adapts to your specific requirements.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
                     <h3>Result-Driven</h3>
                     <p>Focused on measurable success.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
                     <h3>Time to Perform</h3>
                     <p>Quick start, fast performance improvements.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
                     <h3>Scalable Solutions</h3>
                     <p>Easily adjust team size as needed.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/1.webp" width="24" height="24" alt=""></picture>
                     <h3>Continuous Support</h3>
                     <p>Ongoing project support.</p>
                 </div>
-                <div>
+                <div class="product-list-item">
                     <picture><img src="web/images/icons/2.webp" width="24" height="24" alt=""></picture>
                     <h3>Best Practices</h3>
                     <p>Adhering to world-class industry standards.</p>
@@ -486,6 +486,97 @@
             </div>
         </div>
     </section>
+    <section class="cta position-relative">
+        <video width="" height="" autoplay loop muted playsinline preload="metadata" poster="web/images/home/cta.webp" class="w-100  videoBanner">
+            <source src="web/video/cta.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="cta-container">
+
+        </div>
+    </section>
+    <section class="contact-form commonPadding-80">
+        <div class="container-ctn">
+            <div class="d-flex flex-wrap justify-content-between">
+                <div class="contact-form-content">
+                    <h2>Still Wondering?
+                        Drop Us a Line</h2>
+                    <p>We're here to help! Whether you have questions about our services, need more information, or just want to give us feedback, we're all ears.</p>
+                </div>
+                <form id="contact-form-wrapper" action="" method="post" enctype="multipart/form-data">
+                            <div class="formGroup">
+                                <label for="email">Your email 
+                                    <i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.33333C4.3181 1.33333 1.33333 4.3181 1.33333 8C1.33333 11.6819 4.3181 14.6667 8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8C14.6667 4.3181 11.6819 1.33333 8 1.33333ZM0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" fill="#FCFCFC"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99996 11.666C7.63177 11.666 7.33329 11.3675 7.33329 10.9993L7.33329 7.66602C7.33329 7.29783 7.63177 6.99935 7.99996 6.99935C8.36815 6.99935 8.66663 7.29783 8.66663 7.66602L8.66663 10.9993C8.66663 11.3675 8.36815 11.666 7.99996 11.666Z" fill="#FCFCFC"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99996 5.66602C7.63177 5.66602 7.33329 5.36754 7.33329 4.99935L7.33329 4.66602C7.33329 4.29783 7.63177 3.99935 7.99996 3.99935C8.36815 3.99935 8.66663 4.29783 8.66663 4.66602L8.66663 4.99935C8.66663 5.36754 8.36815 5.66602 7.99996 5.66602Z" fill="#FCFCFC"/> </svg></i>
+                                </label>
+                                    <input type="email" id="email" class="mail" name="email" placeholder="Enter email">
+                                    <span id="emailError" class="error-message">Please enter a valid email</span>
+                            </div>
+                            <div class="formGroup">
+                                <label for="name">Your name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter name">
+                                <span id="nameError" class="error-message">Please enter your name</span>
+                            </div>
+                            <div class="formGroup ">
+                                <label for="name">Message</label>
+                                <textarea name="message" id="message" cols="1" rows="1" placeholder="What can we help you with? Our sales team can help you find the right plan and pricing for your business."></textarea>
+                                <span id="messageError" class="error-message">Please enter your message</span>
+                            </div>
+
+                            <button type="submit" class="btn bgTheme footerBtn w-100 justify-content-center" value="Submit">
+                                Send request
+                                <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"> <path d="M16.3195 5.3418L5.00575 16.6555" stroke="white" stroke-width="2"></path> <path d="M6.47117 5.78298C10.2845 7.91922 12.5965 8.00493 16.2514 5.41128" stroke="white" stroke-width="2"></path> <path d="M15.8805 15.1931C13.7442 11.3799 13.6585 9.06784 16.2522 5.41294" stroke="white" stroke-width="2"></path> </svg></i>
+                            </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+ 
+    <footer>
+        <div class="container-ctn">
+            <div class="d-flex flex-wrap justify-content-between footer-top">
+                <a href="" class="brand">
+                    <img src="web/images/logo.webp" width="83" height="36" alt="brand">
+                </a>
+                <div class="quick-links">
+                    <p>Navigation</p>
+                    <ul>
+                        <li><a href="">Why us</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <p>Contact</p>
+                    <a href="mailto:contact@gmail.com">contact@gmail.com</a>
+                    <a href="tel:+16500000000">+ 1 650 000 00 00</a>
+                </div>
+                <div class="social">
+                    <button class="btn bgTheme">
+                        Hire dev
+                        <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"> <path d="M16.3195 5.3418L5.00575 16.6555" stroke="white" stroke-width="2"/> <path d="M6.47117 5.78298C10.2845 7.91922 12.5965 8.00493 16.2514 5.41128" stroke="white" stroke-width="2"/> <path d="M15.8805 15.1931C13.7442 11.3799 13.6585 9.06784 16.2522 5.41294" stroke="white" stroke-width="2"/> </svg></i>
+                    </button>
+                    
+                    <ul>
+                        <li class="facebook"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_876_2366)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0100098 12C0.0100098 5.37336 5.38337 0 12.01 0C18.6366 0 24.01 5.37336 24.01 12C24.01 18.6266 18.6366 24 12.01 24C5.38337 24 0.0100098 18.6266 0.0100098 12ZM13.1449 12H15.1136L15.3653 9.51809H13.135L13.1399 8.27467C13.1399 7.62829 13.1843 7.28289 14.112 7.28289H15.3554V4.80099H13.3718C10.9886 4.80099 10.4409 6.03454 10.4409 8.05757L10.4459 9.51809H8.64488V12H10.4459V19.199H13.1449V12Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2366"> <rect width="24" height="24" fill="white" transform="translate(0.0100098)"/> </clipPath> </defs> </svg></a></li>
+                        <li class="twitter"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"> <g clip-path="url(#clip0_876_2368)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6733 0C6.04592 0 0.67334 5.37258 0.67334 12C0.67334 18.6274 6.04592 24 12.6733 24C19.3007 24 24.6733 18.6274 24.6733 12C24.6733 5.37258 19.3007 0 12.6733 0ZM12.9892 10.0205L12.9567 9.4582C12.8591 8.00085 13.7153 6.66972 15.0701 6.15334C15.5687 5.96973 16.4141 5.94678 16.9668 6.10743C17.1836 6.17629 17.5955 6.40579 17.8881 6.61234L18.4192 6.99103L19.0044 6.79595C19.3296 6.69267 19.7631 6.52054 19.9582 6.40579C20.1425 6.30251 20.305 6.24514 20.305 6.27956C20.305 6.47464 19.904 7.14021 19.568 7.50741C19.1128 8.0238 19.2429 8.0697 20.1641 7.72544C20.7169 7.53036 20.7277 7.53036 20.6194 7.74839C20.5543 7.86315 20.2183 8.26478 19.8607 8.63199C19.2537 9.26312 19.2212 9.33198 19.2212 9.85984C19.2212 10.6746 18.8527 12.3729 18.4842 13.3024C17.8014 15.0466 16.3382 16.8483 14.875 17.7548C12.8158 19.0286 10.0737 19.3499 7.76514 18.604C6.99562 18.3515 5.67334 17.7089 5.67334 17.5941C5.67334 17.5597 6.07436 17.5138 6.56208 17.5023C7.58089 17.4794 8.59969 17.181 9.46676 16.6532L10.052 16.286L9.38005 16.045C8.42627 15.7007 7.57005 14.9089 7.35328 14.1631C7.28825 13.9221 7.30993 13.9106 7.91687 13.9106L8.5455 13.8991L8.01442 13.6352C7.3858 13.3024 6.81136 12.7401 6.52957 12.1664C6.32364 11.7533 6.06352 10.709 6.13939 10.6287C6.16106 10.5943 6.38867 10.6631 6.64879 10.7549C7.39663 11.0418 7.49418 10.9729 7.06065 10.491C6.24777 9.61886 5.99849 8.32215 6.38867 7.0943L6.57292 6.54349L7.28825 7.28938C8.75142 8.79264 10.4747 9.68771 12.4473 9.95164L12.9892 10.0205Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2368"> <rect width="24" height="24" fill="white" transform="translate(0.67334)"/> </clipPath> </defs> </svg></a></li>
+                        <li class="linkdin"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"> <g clip-path="url(#clip0_876_2370)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33667 12C0.33667 5.37187 5.70854 0 12.3367 0C18.9648 0 24.3367 5.37187 24.3367 12C24.3367 18.6281 18.9648 24 12.3367 24C5.70854 24 0.33667 18.6281 0.33667 12ZM5.92886 18.1406H8.84917V9.34688H5.92886V18.1406ZM7.38667 8.14688H7.36792C6.38823 8.14688 5.75073 7.47188 5.75073 6.62813C5.75073 5.76562 6.4023 5.10938 7.40542 5.10938C8.40854 5.10938 9.02261 5.76562 9.04136 6.62813C9.04136 7.47188 8.40854 8.14688 7.38667 8.14688ZM16.4664 18.1406H19.3867V13.0969C19.3867 10.3969 17.943 9.14062 16.0211 9.14062C14.4695 9.14062 13.7758 9.99375 13.3867 10.5938V9.34688H10.4664C10.5039 10.1719 10.4664 18.1406 10.4664 18.1406H13.3867V13.2328C13.3867 12.9703 13.4101 12.7078 13.4851 12.5203C13.6961 11.9953 14.1789 11.4516 14.9851 11.4516C16.0445 11.4516 16.4664 12.2578 16.4664 13.4391V18.1406Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2370"> <rect width="24" height="24" fill="white" transform="translate(0.33667)"/> </clipPath> </defs> </svg></a></li>
+                        <li class="git"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_876_2372)"> <path d="M12 0C5.37187 0 0 5.50862 0 12.3047C0 17.7367 3.43594 22.3504 8.20781 23.9776C8.80781 24.0925 9.02812 23.7096 9.02812 23.3841C9.02812 23.0922 9.01875 22.3169 9.00937 21.2927C5.67187 22.0297 4.96875 19.6415 4.96875 19.6415C4.425 18.2201 3.6375 17.842 3.6375 17.842C2.54531 17.081 3.71719 17.0954 3.71719 17.0954C4.92187 17.1815 5.55469 18.3637 5.55469 18.3637C6.62344 20.2446 8.3625 19.699 9.04687 19.3831C9.15469 18.5886 9.46406 18.0478 9.81094 17.7367C7.14844 17.4256 4.34531 16.3727 4.34531 11.6586C4.34531 10.3137 4.81406 9.21773 5.58281 8.35626C5.45625 8.04518 5.04844 6.79604 5.7 5.10182C5.7 5.10182 6.70781 4.77159 9 6.36052C9.95625 6.08772 10.9828 5.95372 12.0047 5.94893C13.0219 5.95372 14.0484 6.08772 15.0094 6.36531C17.2969 4.77159 18.3047 5.1066 18.3047 5.1066C18.9609 6.80083 18.5484 8.04996 18.4266 8.36105C19.1953 9.22252 19.6594 10.3185 19.6594 11.6634C19.6594 16.3871 16.8562 17.4256 14.1797 17.7319C14.6109 18.11 14.9953 18.8614 14.9953 20.01C14.9953 21.6564 14.9812 22.9821 14.9812 23.3841C14.9812 23.7144 15.1969 24.0972 15.8062 23.9776C20.5641 22.3408 24 17.7367 24 12.3047C24 5.50862 18.6281 0 12 0Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2372"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg></a></li>
+                        <li class="behance"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_876_2375)"> <path d="M10.1093 9.99847C10.1093 9.08008 9.48433 9.08008 9.48433 9.08008H9.15323H6.91332L6.91235 11.0513H9.32482C9.74197 11.0513 10.1093 10.9183 10.1093 9.99847Z" fill="white"/> <path d="M16.0679 11.0508C14.7044 11.0508 14.5139 12.411 14.5139 12.411H17.4151C17.4151 12.411 17.4329 11.0508 16.0679 11.0508Z" fill="white"/> <path d="M9.48288 12.4121H6.91235V14.7739H9.18948C9.22815 14.7739 9.28519 14.7758 9.35334 14.7739C9.71925 14.7647 10.4148 14.6603 10.4148 13.6264C10.4148 12.4005 9.48288 12.4121 9.48288 12.4121Z" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0100098 12C0.0100098 5.38323 5.39324 0 12.01 0C18.6273 0 24.01 5.38323 24.01 12C24.01 18.6163 18.6263 24 12.01 24C5.39324 24 0.0100098 18.6163 0.0100098 12ZM17.7778 8.03148H14.1337V9.11954H17.7778V8.03148ZM12.2909 13.737C12.2909 16.4327 9.48452 16.3447 9.48452 16.3447H6.91399H6.83858H4.88869V7.51126H6.83858H6.91399H9.48452C10.8819 7.51126 11.9845 8.2832 11.9845 9.8638C11.9845 11.4439 10.6368 11.5445 10.6368 11.5445C12.4132 11.544 12.2909 13.737 12.2909 13.737ZM14.5304 13.5914H19.1084C19.1084 13.5914 19.1085 13.5904 19.1087 13.5884C19.1226 13.4685 19.5518 9.75736 16.0347 9.75736C12.6376 9.75736 12.6409 13.1515 12.6409 13.1515C12.6409 13.1515 12.408 16.5278 16.0347 16.5278C16.0347 16.5278 19.0576 16.7014 19.0576 14.1792H17.5017C17.5017 14.1792 17.5529 15.1295 16.0854 15.1295C16.0854 15.1295 14.5304 15.2329 14.5304 13.5914Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2375"> <rect width="24" height="24" fill="white" transform="translate(0.0100098)"/> </clipPath> </defs> </svg></a></li>
+                        <li class="dribble"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"> <g clip-path="url(#clip0_876_2380)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6733 0C19.301 0 24.6733 5.37234 24.6733 12C24.6733 18.6277 19.301 24 12.6733 24C6.04568 24 0.67334 18.6277 0.67334 12C0.67334 5.37234 6.04568 0 12.6733 0ZM14.3149 11.6269C14.1715 11.295 14.0219 10.9636 13.8621 10.6359C15.2247 10.0458 16.3197 9.24422 17.1358 8.22797C17.9318 9.16828 18.4315 10.3631 18.5051 11.6705C16.9858 11.4216 15.589 11.408 14.3149 11.6269ZM15.9194 16.8614C15.6612 15.4734 15.2819 14.1164 14.7869 12.7927C15.8937 12.6361 17.1115 12.6769 18.4441 12.9084C18.1863 14.5523 17.2479 15.9722 15.9194 16.8614ZM9.08412 16.6083C10.2457 14.7858 11.7288 13.5994 13.5663 13.0519C14.1133 14.4802 14.516 15.9487 14.7719 17.453C12.858 18.1931 10.7069 17.8753 9.08412 16.6083ZM6.83271 11.8495C9.10287 11.8458 11.0618 11.5852 12.7024 11.0691C12.8402 11.3489 12.9715 11.6302 13.0976 11.9142C11.1044 12.5367 9.46147 13.8141 8.17943 15.7369C7.25693 14.6297 6.79756 13.2867 6.83271 11.8495ZM10.0347 6.7875C10.8204 7.81547 11.516 8.87531 12.1212 9.96234C10.6872 10.3847 8.97631 10.6012 6.99771 10.6148C7.40646 8.94234 8.5324 7.55156 10.0347 6.7875ZM16.2387 7.37438C15.528 8.29078 14.5469 9.01547 13.2968 9.54516C12.6972 8.44734 12.0129 7.37625 11.239 6.33703C12.9902 5.89078 14.8019 6.26438 16.2387 7.37438ZM12.6733 4.92C8.7635 4.92 5.59334 8.09016 5.59334 12C5.59334 15.9098 8.7635 19.08 12.6733 19.08C16.5837 19.08 19.7533 15.9098 19.7533 12C19.7533 8.09016 16.5832 4.92 12.6733 4.92Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2380"> <rect width="24" height="24" fill="white" transform="translate(0.67334)"/> </clipPath> </defs> </svg></a></li>
+                        <li class="youtube"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"> <g clip-path="url(#clip0_876_2383)"> <path d="M10.7761 14.2483L14.8422 12.0001L10.7761 9.75195V14.2483Z" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.33667 12C0.33667 5.3736 5.71027 0 12.3367 0C18.9631 0 24.3367 5.3736 24.3367 12C24.3367 18.6264 18.9631 24 12.3367 24C5.71027 24 0.33667 18.6264 0.33667 12ZM19.5262 15.6194C19.8349 14.4459 19.8349 12.0123 19.8349 12.0123C19.8349 12.0123 19.8473 9.56653 19.5262 8.39301C19.3531 7.75067 18.8467 7.24402 18.2043 7.07117C17.0308 6.75 12.3367 6.75 12.3367 6.75C12.3367 6.75 7.64258 6.75 6.46906 7.0589C5.83899 7.23175 5.32007 7.75067 5.14722 8.39301C4.83832 9.56653 4.83832 12 4.83832 12C4.83832 12 4.83832 14.4459 5.14722 15.607C5.32025 16.2493 5.82672 16.756 6.46906 16.9288C7.65485 17.25 12.3367 17.25 12.3367 17.25C12.3367 17.25 17.0308 17.25 18.2043 16.9411C18.8467 16.7682 19.3531 16.2618 19.5262 15.6194Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2383"> <rect width="24" height="24" fill="white" transform="translate(0.33667)"/> </clipPath> </defs> </svg></a></li>
+                        <li class="instagram"><a href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <g clip-path="url(#clip0_876_2386)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3727 7.93673C17.2602 7.63673 17.0867 7.36485 16.8571 7.14454C16.6367 6.91485 16.3649 6.74141 16.0649 6.62891C15.8211 6.53516 15.4555 6.42266 14.7852 6.38985C14.0586 6.35704 13.8383 6.34766 12.0008 6.34766C10.1586 6.34766 9.94297 6.35235 9.21641 6.38985C8.5461 6.42266 8.18047 6.53516 7.93672 6.62891C7.63672 6.74141 7.36485 6.91485 7.14453 7.14454C6.91485 7.36485 6.74141 7.63673 6.62891 7.93673C6.53516 8.18048 6.42266 8.5461 6.38985 9.21641C6.35703 9.94298 6.34766 10.1586 6.34766 12.0008C6.34766 13.8383 6.35703 14.0586 6.38985 14.7852C6.42266 15.4555 6.53047 15.8211 6.62891 16.0649C6.74141 16.3649 6.91485 16.6367 7.14453 16.857C7.36485 17.0867 7.63672 17.2602 7.93672 17.3727C8.18047 17.4664 8.5461 17.5789 9.21641 17.6117C9.94297 17.6445 10.1586 17.6539 12.0008 17.6539C13.843 17.6539 14.0586 17.6492 14.7852 17.6117C15.4555 17.5789 15.8211 17.4711 16.0649 17.3727C16.6649 17.143 17.143 16.6649 17.3727 16.0649C17.4664 15.8211 17.5789 15.4555 17.6117 14.7852C17.6446 14.0586 17.6539 13.8383 17.6539 12.0008C17.6539 10.1586 17.6492 9.94298 17.6117 9.21641C17.5789 8.5461 17.4664 8.18048 17.3727 7.93673ZM12.0008 15.5399C10.0461 15.5399 8.46172 13.9555 8.46172 12.0008C8.46172 10.0461 10.0461 8.46173 12.0008 8.46173C13.9555 8.46173 15.5399 10.0461 15.5399 12.0008C15.5399 13.9555 13.9555 15.5399 12.0008 15.5399ZM14.8555 8.32579C14.8555 8.78048 15.2258 9.15079 15.6805 9.15079C16.1352 9.15079 16.5055 8.78048 16.5055 8.32579C16.5055 7.8711 16.1352 7.50079 15.6805 7.50079C15.2258 7.50079 14.8555 7.8711 14.8555 8.32579Z" fill="white"/> <path d="M14.2969 12C14.2969 13.2703 13.2703 14.2969 12 14.2969C10.7297 14.2969 9.70312 13.2703 9.70312 12C9.70312 10.7297 10.7297 9.70312 12 9.70312C13.2703 9.70312 14.2969 10.7297 14.2969 12Z" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6281 18.6281 24 12 24C5.37187 24 0 18.6281 0 12C0 5.37187 5.37187 0 12 0C18.6281 0 24 5.37187 24 12ZM18.5297 16.5141C18.6984 16.0734 18.8156 15.5719 18.8484 14.8406C18.8813 14.1047 18.8906 13.8703 18.8906 12C18.8906 10.1297 18.8813 9.89531 18.8484 9.15938C18.8156 8.42344 18.6984 7.92656 18.5297 7.48594C18.3563 7.02656 18.0844 6.60938 17.7328 6.26719C17.3906 5.91563 16.9734 5.64375 16.5141 5.47031C16.0734 5.30156 15.5719 5.18437 14.8406 5.15156C14.1047 5.11875 13.8703 5.10938 12 5.10938C10.1297 5.10938 9.89531 5.11875 9.15938 5.15156C8.42344 5.18437 7.92656 5.30156 7.48594 5.47031C7.02656 5.64375 6.60938 5.91563 6.26719 6.26719C5.91563 6.60938 5.64375 7.02656 5.47031 7.48594C5.30156 7.92656 5.18437 8.42813 5.15156 9.15938C5.11875 9.89531 5.10938 10.1297 5.10938 12C5.10938 13.8703 5.11875 14.1047 5.15156 14.8406C5.18437 15.5766 5.30156 16.0781 5.47031 16.5141C5.64375 16.9734 5.91563 17.3906 6.26719 17.7328C6.60938 18.0844 7.02656 18.3563 7.48594 18.5297C7.92656 18.6984 8.42813 18.8156 9.15938 18.8484C9.89531 18.8813 10.1297 18.8906 12 18.8906C13.8703 18.8906 14.1047 18.8813 14.8406 18.8484C15.5766 18.8156 16.0781 18.6984 16.5141 18.5297C17.4422 18.1734 18.1734 17.4375 18.5297 16.5141Z" fill="white"/> </g> <defs> <clipPath id="clip0_876_2386"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="copyright">
+                Copyright 2024, All Rights Reserved
+            </div>
+        </div>
+    </footer>
 
     <div class="float-menu">
         <div class="d-flex justify-content-center align-items-center">
@@ -525,8 +616,12 @@
 
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Why us</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Blog</a></li>
                 </ul>
 
             </nav>

@@ -4,6 +4,40 @@
 
   font-weight: 700;
   font-family: $secondary-font;
+  &.footerBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 14px;
+    padding: 3px 13px;
+    @include min(768) {
+      padding: 6px 20px;
+      margin-bottom: 16px;
+      border-radius: 7px;
+    }
+    @include min(992) {
+      padding: 4px 15px;
+      margin-bottom: 18px;
+    }
+    @include min(1200) {
+      border-radius: 12px;
+      padding: 8px 18.99px 8px 22px;
+      margin-bottom: 20px;
+    }
+    @include min(1360) {
+      padding: 10px 20.99px 10px 25px;
+      margin-bottom: 22px;
+    }
+    @include min(1440) {
+      padding: 12px 24.99px 12px 29px;
+
+      margin-bottom: 24px;
+    }
+    @include min(1900) {
+      padding: 16px 34.99px 16px 39px;
+    }
+  }
   &.bgTheme{
     transition:  0.5s ease all ;
     &::before,&::after{
@@ -11,6 +45,7 @@
       @extend .position;
       height: 100%;
       left: 0;
+      top: 0;
       transition:  0.5s ease all ;
     }
     &::before{
@@ -67,8 +102,13 @@
     justify-content: center;
     border: 1px solid #fff;
     border-radius: 8px;
-    height: 48px;
-   
+    height: 40px;
+    @include min(768){
+      height: 44px;
+    }
+    @include min(1200){
+      height: 48px;
+    }
   }
   &.planBtnIcon{
     gap: 10px;

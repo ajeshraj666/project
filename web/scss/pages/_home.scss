@@ -64,8 +64,6 @@
     width: fit-content;
     margin: auto;
     font-family: $secondary-font;
-
-   
     border-radius: 30px;
     margin-bottom: 10px;
     padding: 6px 14px;
@@ -314,10 +312,14 @@
       }
     }
   }
-  .d-flex {
+  .product-list {
     gap: 20px;
-    margin: 30px  0px;
+    margin: 50px  0px;
 
+    @include min(575) {
+
+      margin: 30px  0px;
+        }
     @include min(992) {
       gap: 22px;
       margin: 40px  0px;
@@ -346,7 +348,10 @@
       margin: 80px 0px;
 
     }
-    > div {
+    .slick-slide > div {
+      margin: 5px;
+  }
+   .product-list-item {
       picture{
         display: flex;
         align-items: center;
@@ -889,6 +894,8 @@ ul,.gradientBg {
     }
     @include max(575){
       background-size: cover;
+      background-position-x: left;
+      background-position-y: 300px;
     }
   }
   > picture{
@@ -961,8 +968,16 @@ ul,.gradientBg {
       }
     }
     >span,>.nav{
-      margin-bottom: 24px;
-
+      margin-bottom: 15px;
+      @include min(576){
+        margin-bottom: 18px;
+      }
+      @include min(992){
+        margin-bottom: 20px;
+      }
+      @include min(1200){
+        margin-bottom: 24px;
+      }
     }
     > span{
       font-family: $secondary-font;
@@ -1001,90 +1016,103 @@ ul,.gradientBg {
 
         }
         overflow: hidden;
-        &:first-child{
-          &::after, &::before{
-            @extend .position;
-            border-radius: 18px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-          }
-          &::before{
-            border: 3px solid transparent;
-            background-clip: padding-box;
-            border-image-slice: 1;
-            border-image-source: linear-gradient(45deg, #3412E0, #7928E5, #07B4CC);
-            animation: gradientBorder 2s linear infinite;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-          }
-          &::after{
-            border: 3px solid #3412E0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-
+        @include min(576){
+          &:first-child{
+            &::after, &::before{
+             content: '';
+             position: absolute;
+              border-radius: 18px;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+            }
+            &::before{
+              border: 3px solid transparent;
+              background-clip: padding-box;
+              border-image-slice: 1;
+              border-image-source: linear-gradient(45deg, #3412E0, #7928E5, #07B4CC);
+              animation: gradientBorder 2s linear infinite;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+            &::after{
+              border: 3px solid #3412E0;
+              width: 100%;
+              height: 100%;
+              z-index: -2;
+  
+            }
           }
         }
 
-        // align-items: center;
-        // justify-content: center;
-        // &:first-child{
-        //   &::before {
-        //     content: "";
-        //     display: block;
-        //     background: linear-gradient(
-        //       90deg,
-        //       #3412E0 0%,
-        //       #7928E5 50%,
-        //       #07B4CC 100%
-        //     );
-        //     height: 650px;
-        //     width: 650px;   
-        //     @include min(576){
-        //       height: 700px;
-        //       width: 700px;        
-        //     }
+    @include max(575){
+      align-items: center;
+        justify-content: center;
+      }
+        &:first-child{
+          &::before {
+            @include max(575){
+              content: "";
+            display: block;
+            background: linear-gradient(
+              90deg,
+              #3412E0 0%,
+              #7928E5 50%,
+              #07B4CC 100%
+            );
+            height: 1000px;
+            width: 1000px; 
+            position: absolute;
+            animation: rotate 8s linear infinite;
+            z-index: -2; 
+            } 
+            // @include min(576){
+            //   height: 700px;
+            //   width: 700px;        
+            // }
             
-        //     @include min(1200){
-        //       height: 750px;
-        //       width: 750px;        
-        //     }
-        //     @include min(1440){
-        //       height: 740px;
-        //       width: 740px;        
-        //     }
-        //     @include min(1600){
-        //       height: 760px;
-        //       width: 760px;       
-        //     }
-        //     @include min(1900){
-        //       height: 820px;
-        //       width: 820px;       
-        //     }
-        //     @include min(1921){
-        //       height: 850px;
-        //       width: 850px;       
-        //     }
+            // @include min(1200){
+            //   height: 750px;
+            //   width: 750px;        
+            // }
+            // @include min(1440){
+            //   height: 740px;
+            //   width: 740px;        
+            // }
+            // @include min(1600){
+            //   height: 760px;
+            //   width: 760px;       
+            // }
+            // @include min(1900){
+            //   height: 820px;
+            //   width: 820px;       
+            // }
+            // @include min(1921){
+            //   height: 850px;
+            //   width: 850px;       
+            // }
          
-        //     position: absolute;
-        //     animation: rotate 8s linear infinite;
-        //     z-index: -2;
-        //   }
-        //   &::after{
-        //     @extend .position;
-        //     border-radius: 18px;
-        //     z-index: -2;
-        //     width: 98%;
-        //     height: 98.5%;
-        //     @include min(768){
-        //       width: 99%;
-        //     height: 99%;
-        //     }
-        //     background: #000;
-        //   }
-        // }
+           
+          }
+          &::after{
+            @include max(575){
+              content: '';
+              position: absolute;
+              border-radius: 18px;
+              z-index: -2;
+              width: 98%;
+              height: 98.5%;
+              background: #000;
+
+            }
+            // @include min(768){
+            //   width: 99%;
+            // height: 99%;
+            // }
+          }
+        }
+        
         
         @include min(768){
           width:48%;
@@ -1325,21 +1353,55 @@ ul,.gradientBg {
 // ===============================clients Section Start==============================
 .clients{
   background: linear-gradient(180deg, #21262D 0%, #020203 100%);
-
+  position: relative;
+  @include max(767){
+    padding-bottom: 0;
+  }
+  &::after{
+    @extend .position;
+    @include min(576){
+      width: 100%;
+      height: 30%;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(0deg, #020203 0%, rgba(22, 27, 34, 0.00)100%);
+      height: 20%;
+    }
+    @include min(992){
+      height: 45%;
+    }
+    }
   .clients-testimonial {
-    columns: 3 227px;
-    column-gap: 22px;
-    margin: 0 auto;
+    @include min(576){
+      columns: 3 227px;
+      column-gap: 22px;
+      margin: 0 auto;
+
+    }
+    @include min(1900){
+      column-gap: 30px;
+    }
+    @include max(575){
+      .slick-list{
+        // margin-left: -15px;
+        // margin-right: -15px;
+      }
+    }
 }
 
 .testimonialBox{
   display: inline-block;
-  margin-bottom: 22px;
   padding: 25px 18.5px;
   border-radius: 16px;
   background: #242931;
-
+  @include max(575){
+    min-height: 420px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
   @include min(576){
+    margin-bottom: 22px;
     padding: 30px 20px;
   }
   @include min(768){
@@ -1354,10 +1416,20 @@ ul,.gradientBg {
   @include min(1440){
     padding: 44px 24px;
   }
+  @include min(1900){
+    padding:60px 30px;
+    margin-bottom: 30px;
+  }
   >p{
     line-height: 27.36px;
     padding-bottom: 16px;
     margin-bottom: 16px;
+
+    @include min(1900){
+      line-height: 33.36px;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    }
     position: relative;
     &::after{
       @extend .position;
@@ -1374,6 +1446,9 @@ ul,.gradientBg {
       line-height: 22px;
         +p{
           margin-top: 4px;
+          @include min(1900){
+            margin-top: 8px;
+          }
         }
 
     }
@@ -1381,7 +1456,247 @@ ul,.gradientBg {
 }
 .my-rating-readonly{
   margin-bottom: 17px;
+  @include min(1900){
+    margin-bottom: 25px;
+  }
 }
 }
 // ===============================clients Section End================================
+// ===============================Contact Section Start==============================
+.contact-form-content{
+  width: 95%;
+  @include max(767){
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  @include min(768){
+    width: 48%;
+  }
+  @include min(992){
+    width: 37.701%;
+  }
+  @include min(1600){
+    width: 33.701%;
+  }
+  h2{
+    margin-bottom: 12px;
+ 
+    @include max(575){
+      line-height: 40px;
+      font-size: 30px;
+    }
+    @include min(576){
+      margin-bottom: 16px;
+      font-size: 28px;
+    }
+    @include min(992){
+      font-size: 33px;
+    }
+    @include min(1200){
+      margin-bottom: 20px;
+      font-size: 40px;
+    }
+    @include min(1360){
+      margin-bottom: 22px;
+      font-size: 44px;
+    }
+    @include min(1440){
+      margin-bottom: 24px;
+      font-size: 48px;
+    }
+    @include min(1600){
+      margin-bottom: 26px;
+      font-size: 50px;
+    }
+    @include min(1900){
+      margin-bottom:30px;
+      font-size: 60px;
+    }
+  }
+  p{
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 22px; 
+    @include min(768){
+      font-size: 15px;
+      line-height: 25px; 
+    }
+    @include min(1200){
+      font-size: 16px;
+      line-height: 26px; 
+    }
+    @include min(1360){
+      font-size: 18px;
+      line-height: 28px; 
+    }
+    @include min(1440){
+      font-size: 20px;
+      line-height: 30px; 
+    }
+    @include min(1600){
+      font-size: 22px;
+      line-height: 32px; 
+    }
+    @include min(1900){
+      font-size: 24px;
+      line-height: 34px; 
+    }
+  }
+}
+.contact-form{
+  background:linear-gradient(180deg, #010101 1%, rgba(38, 65, 155, 0.7) 75%, rgba(187, 52, 201, 0.3) 104%);
+  // background: linear-gradient(181deg, #010101 17.18%, rgba(38, 65, 155, 0.70) 77.81%, rgba(187, 52, 201, 0.30) 115.22%);
+  form{
+    border-radius: 20px;
+    border: 1px solid rgba(106, 112, 123, 0.30);
+    background: rgba(87, 99, 117, 0.20);
+    box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    width: 95%;
+    padding: 20px;
+    @include max(767){
+      margin: auto;
+    }
+    @include min(768){
+      width: 48.957%;
+      padding: 25px;
+    }
+   
+    @include min(1200){
+      padding: 36px;
+    }
+    @include min(1440){
+      padding: 40px;
+    }
+    @include min(1600){
+      padding: 45px;
+    }
+    @include min(1900){
+      padding: 50px;
+    }
+
+  }
+  input,textarea{
+    color: rgba(252, 252, 252, 0.40);
+      letter-spacing: 0.75px;
+    width: 100%;
+    border-radius: 12px;
+    background: rgba(186, 213, 255, 0.10);
+    border: unset;
+    outline: unset;
+    padding: 8px 10px;
+    @include min(1200){
+      padding: 8px 10px;
+    }
+    @include min(1200){
+      padding: 6px 40px 6px 16px;
+    }
+    @include min(1360){
+      padding: 7px 45px 7px 18px;
+    }
+    @include min(1440){
+      padding: 8px 56px 8px 20px;
+    }
+    @include min(1600){
+      padding: 9px 65px 9px 22px;
+    }
+    @include min(1900){
+      padding: 10px 70px 10px 24px;
+    }
+    &::placeholder{
+      color: rgba(252, 252, 252, 0.40);
+      letter-spacing: 0.75px;
+      font-size: 13px;
+      line-height: 20px;
+      // @include min(768){
+      //   font-size: 13px;
+      //   line-height: 20px;
+      // }
+      @include min(1200){
+        font-size: 14px;
+        line-height: 22px;
+      }
+      @include min(1360){
+        font-size: 15px;
+        line-height: 24px;
+      }
+      @include min(1600){
+        font-size: 16px;
+        line-height: 25px;
+      }
+      @include min(1900){
+        font-size: 19px;
+        line-height: 30px;
+      }
+    }
+  }
+  input{
+    height: 40px;
+    @include min(1600){
+      height: 46px;
+    }
+    @include min(1900){
+      height: 52px;
+    }
+  }
+  textarea{
+    height: 130px;
+    @include min(992){
+      height: 100px;
+    }
+    @include min(1200){
+      height: 121px;
+    }
+    @include min(1440){
+      height: 131px;
+    }
+
+  }
+  label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color:  #FCFCFC;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    line-height: 22px; 
+    @include min(1600){
+      margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 23px; 
+    }
+    @include min(1900){
+      margin-bottom: 7px;
+      font-size: 15px;
+      line-height: 26px; 
+    }
+    i{
+      display: flex;
+      align-items: center;
+    }
+    svg{
+      @include max(767){
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  .formGroup{
+    margin-bottom: 20px;
+    position: relative;
+    @include min(1600){
+      margin-bottom: 22px;
+    }
+    @include min(1900){
+      margin-bottom: 24px;
+    }
+  }
+  button{
+    gap: 10px;
+  }
+}
+
+// ===============================Contact Section End================================
 
