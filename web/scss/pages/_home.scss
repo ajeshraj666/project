@@ -883,7 +883,9 @@ ul,.gradientBg {
     height: 100%;
     top: 0;
     opacity: 0.3;
-    background-position-x: -140px;
+    @include min(992){
+      background-position-x: -140px;
+    }
     @include max(575){
       background-size: cover;
     }

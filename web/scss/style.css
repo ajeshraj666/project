@@ -2522,7 +2522,11 @@ a.brand p {
   height: 100%;
   top: 0;
   opacity: 0.3;
-  background-position-x: -140px;
+}
+@media (min-width: 992px) {
+  .plans::before {
+    background-position-x: -140px;
+  }
 }
 @media (max-width: 575px) {
   .plans::before {
