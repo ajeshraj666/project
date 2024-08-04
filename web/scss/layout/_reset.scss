@@ -282,7 +282,7 @@ li {
     }
   }
 }
-article,
+
 .list {
   > ul {
     li {
@@ -616,5 +616,17 @@ input[type="date"] {
   }
 }
 .head-mb-40{
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+  @include min(768){
+    margin-bottom: 30px;
+  }
+  @include min(992){
+    margin-bottom: 34px;
+  }
+  @include min(1200){
+    margin-bottom: 38px;
+  }
+  @include min(1440){
+    margin-bottom: 40px;
+  }
 }

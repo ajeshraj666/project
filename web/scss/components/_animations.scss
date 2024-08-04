@@ -101,6 +101,18 @@
     border-image-source: linear-gradient(45deg, #3412E0, #7928E5, #07B4CC);
   }
 }
+@keyframes gradientLine {
+  0% {
+    border-image-source: linear-gradient(45deg, #64ACFF, #A2FACF);
+  }
+
+  50% {
+    border-image-source: linear-gradient(45deg, #A2FACF, #64ACFF);
+  }
+  to {
+    border-image-source: linear-gradient(45deg, #64ACFF, #A2FACF);
+  }
+}
 
 @keyframes rotate {
   from {

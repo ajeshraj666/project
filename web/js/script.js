@@ -4,6 +4,9 @@ window.addEventListener('resize', function() {
   }
 });
 
+
+
+
 // Banner Slider
 
 $(document).ready(function () {
@@ -36,14 +39,14 @@ $(document).ready(function () {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
         },
       },
       {
         breakpoint: 767,
         settings: {
           dots: false,
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
     ],
@@ -162,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// ======================Testimonial Rating==========================
+// ======================Coustomer Rating==========================
 $(document).ready(function () {
   $(".my-rating-readonly").starRating({
     starSize: 19,
@@ -172,3 +175,7 @@ $(document).ready(function () {
     starShape: 'rounded',
   });
 });
+
+// ======================Lazy Loading ===============================
+
+document.addEventListener("DOMContentLoaded", function() {var lazyImages = document.querySelectorAll("img[data-src][loading='lazy']");var lazyImageObserver = new IntersectionObserver(function(entries, observer) {entries.forEach(function(entry) {if (entry.isIntersecting) {var lazyImage = entry.target;lazyImage.src = lazyImage.dataset.src;lazyImage.alt = lazyImage.dataset.alt;lazyImage.removeAttribute("data-src");lazyImage.removeAttribute("loading");lazyImageObserver.unobserve(lazyImage);}});});lazyImages.forEach(function(lazyImage) {lazyImageObserver.observe(lazyImage);});});

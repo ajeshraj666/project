@@ -313,4 +313,27 @@
       }
     }
   }
+  &.blogBtn{
+    z-index: 1;
+    &::before{
+      @extend .position;
+      width: 0;
+      background-color: $white;
+      height: 100%;
+      left: 0;
+      transition: 0.5s ease all;
+
+    }
+    &:hover {
+      color: #000;
+      &::before{
+        transition: 0.5s ease all;
+        width: 100%;
+        z-index: -1;
+      }
+      path {
+        stroke: #090C11;
+      }
+    }
+  }
 }

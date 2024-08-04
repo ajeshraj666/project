@@ -43,8 +43,11 @@ a.brand p {
 }
 
 .header-row {
-  @include max(991) {
+  @include min-max(576,991) {
     padding: 17px 0px;
+  }
+  @include max(575) {
+    padding: 15px 0px;
   }
   ul {
     display: flex;

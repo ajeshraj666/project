@@ -1,0 +1,206 @@
+.home-blog{
+  background: rgba(0, 0, 0, 0.70);
+  @include max(767){
+    padding-top: 0;
+  }
+  .head{
+    @extend .head-mb-40;
+  }
+  .load-btn{
+    &::before,&::after{
+      @extend .position;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+
+    }
+    &::before{
+      background-color: $white;
+      width: 100%;
+    }
+    &::after{
+      background:  linear-gradient(90deg, #3412E0 0%, #7928E5 47.91%, #07B4CC 100%);
+      width: 0%;
+      transition: width 0.5s ease ;
+    }
+    &:hover{
+      &::after{
+        transition: width 0.5s ease ;
+        width: 100%;
+      }
+    }
+  }
+  article{
+    background: hsl(217, 15%, 17%);
+    border-radius: 0 0 12px 12px;
+    // width: 31.919%;
+    // flex: 1 1 31.919%;
+    flex-basis: 100%;
+    @include min(768){
+      flex-basis:  48%;
+    }
+    @include min(992){
+      flex-basis:  31.919%;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+      > div{
+        padding: 18px;
+        @include min(576){
+          padding: 16px;
+        }
+        @include min(768){
+          padding: 18px;
+        }
+        @include min(992){
+          padding: 20px;
+        }
+        @include min(1200){
+          padding: 22px;
+        }
+        @include min(1440){
+          padding: 24px;
+        }
+        @include min(1600){
+          padding: 26px;
+        }
+        @include min(1900){
+          padding: 28px;
+        }
+      }
+      ul{
+        display: flex;
+        gap: 8px;
+        li{
+          border-radius: 100px;
+          background: rgba(255, 255, 255, 0.15);
+          letter-spacing: 0.2px;
+          padding: 3px 8px;
+          font-size: 10px;
+          line-height: 14px; 
+        
+          @include min(576){
+            padding: 4px 10px;
+            font-size: 11px;
+            line-height: 15.96px; 
+          }
+          @include min(1600){
+            padding: 6px 12px;
+            font-size: 13px;
+            line-height: 17.96px; 
+          }
+          @include min(1900){
+            padding: 8px 14px;
+            font-size: 15px;
+            line-height: 19.96px; 
+          }
+        }
+      }
+      ul,>div div{
+        margin-bottom: 15px;
+        @include min(576){
+          margin-bottom: 18px;
+        }
+        @include min(992){
+          margin-bottom: 20px;
+        }
+        @include min(1200){
+          margin-bottom: 22px;
+        }
+        @include min(1440){
+          margin-bottom: 24px;
+        }
+        @include min(1600){
+          margin-bottom: 26px;
+        }
+        @include min(1900){
+          margin-bottom: 28px;
+        }
+      }
+      h3{
+        font-weight: 700;
+        letter-spacing: 0.599px;
+        font-size: 18px;
+        line-height: 22px; 
+        margin-bottom: 8px;
+
+        @include min(768){
+          font-size: 20px;
+          line-height: 24px; 
+          margin-bottom: 10px;
+        }
+        @include min(992){
+          font-size: 22px;
+          line-height: 26px; 
+          margin-bottom: 12px;
+        }
+        @include min(1200){
+          font-size: 24px;
+          line-height: 29px; 
+          margin-bottom: 14px;
+        }
+        @include min(1440){
+          font-size: 25.935px;
+          line-height: 31.92px; 
+          margin-bottom: 16px;
+        }
+        @include min(1600){
+          font-size: 27.935px;
+        line-height: 35.92px; 
+        margin-bottom: 18px;
+        }
+        @include min(1900){
+          font-size: 29.935px;
+        line-height: 39.92px; 
+        margin-bottom: 20px;
+        }
+      }
+      p,div> div{
+        color: rgba(255, 255, 255, 0.60);
+
+        font-size: 11px;
+        line-height: 16px; 
+        letter-spacing: 0.399px;
+        @include min(768){
+          font-size: 13px;
+          line-height: 18px; 
+        }
+        @include min(1440){
+          font-size: 14px;
+          line-height: 19.95px; 
+        }
+        @include min(1600){
+          font-size: 16px;
+          line-height: 21px; 
+        }
+        @include min(1900){
+          font-size: 18px;
+          line-height: 24px; 
+        }
+      }
+    .btn{
+      width: 100%;
+    }
+  }
+}
+
+.blog-container{
+  gap: 20px;
+  @include min(576){
+    gap: 15px 2.1%;
+  }
+  @include min(992){
+    gap: 20px 2.1%;
+  }
+  @include min(1200){
+    gap: 24px 2.1%;
+  }
+  @include min(1600){
+    gap: 30px 2.1%;
+  }
+  @include min(1900){
+    gap: 40px 2.1%;
+  }
+}

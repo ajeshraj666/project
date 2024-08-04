@@ -2,7 +2,14 @@
   background-color: $black;
   .video-container{
     @include max(575){
-      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-top: 74px;
+      overflow: hidden;
+
+      video{
+
+        transform: scale(1.4);
+      }
     }
   }
   img {
@@ -201,8 +208,8 @@
   @include min(992){
     margin-left: auto;
   }
- @include min(1440){
-  max-width: 1342px;
+ @include min(992){
+  max-width: 93.65%;
  }
  @include min(1600){
   max-width: 93.65%;
@@ -254,15 +261,20 @@
       margin: auto;
     height: 100%;
     object-fit: contain;
-    width: 120px;
+    width: 86px;
+
 
     @include min(768){
-      width: 148px;
+      width: 120px;
     }
     @include min(992){
-      width: 108px;
+      width: 100px;
     }
     @include min(1200){
+      width: 130px;
+
+    }
+    @include min(1280){
       width: 140px;
 
     }
@@ -660,7 +672,9 @@ i{
 // ===============================Services Section Start==================================
 .services{
   background: linear-gradient(180deg, #070B10 0%, #21262D 100%);
-
+  @include max(767){
+    padding-top: 0;
+  }
 
 ul,.gradientBg {
   width: 100%;
@@ -1357,20 +1371,29 @@ ul,.gradientBg {
   @include max(767){
     padding-bottom: 0;
   }
-  &::after{
-    @extend .position;
-    @include min(576){
-      width: 100%;
-      height: 30%;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(0deg, #020203 0%, rgba(22, 27, 34, 0.00)100%);
-      height: 20%;
+  i{
+   
+    position: absolute;
+      @include min(576){
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, #020203 0%, rgba(22, 27, 34, 0.00)100%);
+        height: 20%;
+        z-index: 0;
+      transition: opacity 0.5s ease;
+
+      }
+      @include min(992){
+        height: 45%;
+      }
+     &:hover{
+      opacity: 0;
+      transition: opacity 0.5s ease;
+     }
     }
-    @include min(992){
-      height: 45%;
-    }
-    }
+    
   .clients-testimonial {
     @include min(576){
       columns: 3 227px;
@@ -1395,6 +1418,12 @@ ul,.gradientBg {
   border-radius: 16px;
   background: #242931;
   margin-bottom: 30px;
+  transform: translateY(0px);
+  transition: transform 0.5s ease;
+  // &:hover{
+  //   transform: translateY(-10px);
+  //   transition: transform 0.5s ease;
+  // }
   @include max(575){
     min-height: 420px;
     margin-left: 15px;
@@ -1466,6 +1495,7 @@ ul,.gradientBg {
 // ===============================Contact Section Start==============================
 .contact-form-content{
   width: 95%;
+  
   @include max(767){
     margin: auto;
     margin-bottom: 30px;
@@ -1545,7 +1575,10 @@ ul,.gradientBg {
   }
 }
 .contact-form{
-  background:linear-gradient(180deg, #010101 1%, rgba(38, 65, 155, 0.7) 75%, rgba(187, 52, 201, 0.3) 104%);
+  @include max(767){
+    padding-top: 0;
+  }
+  background:linear-gradient(180deg, #010101 12%, rgba(38, 65, 155, 0.7) 74%, rgba(187, 52, 201, 0.3) 105%);
   // background: linear-gradient(181deg, #010101 17.18%, rgba(38, 65, 155, 0.70) 77.81%, rgba(187, 52, 201, 0.30) 115.22%);
   form{
     border-radius: 20px;
@@ -1702,6 +1735,7 @@ ul,.gradientBg {
 // ===============================Contact Section End================================
 // ===============================CTA Section Start==================================
 .cta{
+  overflow: hidden;
   video{
     @include max(575){
       height: 235px;
@@ -1734,7 +1768,10 @@ ul,.gradientBg {
     white-space: pre-line;
     margin-bottom: 5px;
     @include min(768){
-      margin-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    @include min(768){
+      margin-bottom: 16px;
     }
     @include min(1200){
       margin-bottom: 11px;
@@ -1801,7 +1838,7 @@ ul,.gradientBg {
 }
 // ===============================CTA Section End====================================
 // ===============================FAQ Section Start==================================
-.faq{
+.theme-tab{
   h2{
     text-align: center;
   }
@@ -1809,12 +1846,46 @@ ul,.gradientBg {
     @extend .head-mb-40;
   }
   .nav {
-    gap: 16px;
+    gap: 5px;
+    @include min(768){
+      gap: 10px;
+    }
+    @include min(992){
+      gap: 12px;
+    }
+    @include min(1200){
+      gap: 14px;
+    }
+    @include min(1440){
+      gap: 16px;
+    }
     .btn{
-      min-width: 248px;
+      padding: 0px 10px;
+      @include min(576){
+        min-width: 160px;
+      }
+      @include min(768){
+        padding: 0px 15px;
+        min-width: 170px;
+      }
+      @include min(992){
+        min-width: 180px;
+      }
+      @include min(1200){
+        min-width: 220px;
+      }
+      @include min(1360){
+        min-width: 230px;
+      }
+      @include min(1440){
+        min-width: 248px;
+      }
+      @include min(1900){
+        min-width: 278px;
+      }
       &::after{
         border: 1px solid #343E4E;
-        transition: border 0.5 ease;
+        transition: border 0.5s ease;
       }
       &::before{
         @extend .position;
@@ -1834,6 +1905,83 @@ ul,.gradientBg {
          
         }
       }
+      &.active::after {
+        border: unset;
+    }
+    }
+  }
+}
+.faq{
+  background: #090C11;
+  h2{
+    text-align: center;
+  }
+  h2, .nav{
+    @extend .head-mb-40;
+  }
+  .nav {
+    gap: 5px;
+    @include min(768){
+      gap: 10px;
+    }
+    @include min(992){
+      gap: 12px;
+    }
+    @include min(1200){
+      gap: 14px;
+    }
+    @include min(1440){
+      gap: 16px;
+    }
+    .btn{
+      padding: 0px 10px;
+      @include min(576){
+        min-width: 160px;
+      }
+      @include min(768){
+        padding: 0px 15px;
+        min-width: 170px;
+      }
+      @include min(992){
+        min-width: 180px;
+      }
+      @include min(1200){
+        min-width: 220px;
+      }
+      @include min(1360){
+        min-width: 230px;
+      }
+      @include min(1440){
+        min-width: 248px;
+      }
+      @include min(1900){
+        min-width: 278px;
+      }
+      // &::after{
+      //   border: 1px solid #343E4E;
+      //   transition: border 0.5s ease;
+      // }
+      &::before{
+        @extend .position;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        border: 1px solid #fff;
+        left: 0;
+        transition:  1s ease all;
+        opacity: 0;
+        
+      }
+      &:hover,&.active{
+        &::before{
+          opacity: 1;
+          transition: 1s ease all;
+         
+        }
+      }
+      &.active::after {
+        border: unset;
+    }
     }
   }
   .accordion-item,.accordion-button{
@@ -1846,15 +1994,37 @@ ul,.gradientBg {
   .accordion-button{
     border-bottom: 1px solid  #484F58;
     &:focus,&:focus-visible{
-      border: unset;
       box-shadow: unset;
     }
     &:hover{
       color:  #79C0FF;
 
     }
-    padding: 24px 0px;
+    padding: 12px 0px;
     font-family: $secondary-font;
+    @include min(768){
+      padding: 18px 0px;
+    }
+    @include min(1200){
+      padding: 22px 0px;
+      font-size: 19px;
+      line-height: 24px;
+    }
+    @include min(1440){
+      padding: 24px 0px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    @include min(1600){
+      padding: 26px 0px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+    @include min(1900){
+      padding: 28px 0px;
+      font-size: 22px;
+      line-height: 30px;
+    }
     &::after{
       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C12.5523 5 13 5.44772 13 6V11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H13V18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18V13H6C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H11V6C11 5.44772 11.4477 5 12 5Z" fill="url(%23paint0_linear_895_228)"/><defs><linearGradient id="paint0_linear_895_228" x1="19.0119" y1="14.4269" x2="4.97554" y2="14.3904" gradientUnits="userSpaceOnUse"><stop offset="0.0709" stop-color="%23A2FACF"/><stop offset="0.9661" stop-color="%2364ACFF"/></linearGradient></defs></svg>');
     }
@@ -1862,7 +2032,7 @@ ul,.gradientBg {
   .accordion-button:not(.collapsed){
     padding-bottom: 12px;
     border: unset;
-    color:  #79C0FF;
+    // color:  #79C0FF;
     box-shadow: unset;
     &::after{
       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="2" viewBox="0 0 14 2" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 0.5C6.5 0.147092 6.5 -0.0302936 6.5 0.00425244H7.25L8 0.00306666H13C13.5523 0.00306666 14 0.450603 14 1.00308C14 1.55556 13.5523 2.0031 13 2.0031H8H1C0.44772 2.0031 0 1.55556 0 1.00308C0 0.450603 0.44772 0.00306666 1 0.00306666H6L6.5 0.00425244C6.5 0.0840134 6.5 0.852908 6.5 0.5Z" fill="url(%23paint0_linear_911_1007)"/><defs><linearGradient id="paint0_linear_911_1007" x1="14.0119" y1="1.34879" x2="-0.0199073" y2="1.09329" gradientUnits="userSpaceOnUse"><stop offset="0.0709" stop-color="%23A2FACF"/><stop offset="0.9661" stop-color="%2364ACFF"/></linearGradient></defs></svg>');
@@ -1871,19 +2041,69 @@ ul,.gradientBg {
     }
   }
   .tab-content {
-    width: 56.717%;
     margin: auto;
+    width: 95%;
+    @include min(768){
+      width: 85%;
+    }
+    @include min(992){
+      width: 80%;
+    }
+    @include min(1200){
+      width: 56.914%;
+    }
+    @include min(1600){
+      width: 49.914%;
+    }
+    @include min(1600){
+      width: 49.914%;
+    }
+    @include min(1900){
+      width: 46%;
+    }
   }
   .accordion-body {
     padding: 0 0 24px 0;
- 
+    p {
+      + p{
+        margin-top: 10px;
+        @include min(768){
+          margin-top: 14px;
+        }
+        @include min(992){
+          margin-top: 16px;
+        }
+        @include min(1200){
+          margin-top: 18px;
+        }
+        @include min(1440){
+          margin-top: 20px;
+        }
+        @include min(1600){
+          margin-top: 22px;
+        }
+        @include min(1900){
+          margin-top: 24px;
+        }
+     }
+      @include min(1440){
+        line-height: 24px;
+        }
+        @include min(1600){
+          line-height: 26px;
+        }
+        @include min(1900){
+          line-height: 28px;
+        }
+    }
   }
   .accordion-collapse {
       border-bottom: 1px solid;
       border-image-slice: 1;
       border-width: 1px;
       border-image-source: linear-gradient(to right, #64ACFF, #A2FACF);
-      transform:  0.5s ease all;
+      transition:  0.5s ease all;
+      animation: gradientLine 1s linear infinite;
     
   }
 }
