@@ -582,6 +582,7 @@ input[type=date] {
   overflow: hidden;
   line-height: 50px;
   height: 19px;
+  letter-spacing: -1.55px;
 }
 @media (min-width: 1600px) {
   .rolling-text {
@@ -594,7 +595,7 @@ input[type=date] {
   }
 }
 .rolling-text span {
-  font-family: "Lato", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 nav a:hover .rolling-text .letter, .quick-links a:hover .rolling-text .letter {
