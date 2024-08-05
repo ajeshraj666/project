@@ -5,6 +5,10 @@
     width: 100%;
     z-index: 999;
     @include min(992){
+        width: fit-content;
+        height: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
         top: 75%;
     }
     @include min(1200){

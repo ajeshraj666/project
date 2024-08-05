@@ -4206,6 +4206,7 @@ footer::before {
   overflow: hidden;
 }
 .expertise .accordion-item {
+  position: relative;
   background: linear-gradient(to right, #64ACFF, #A2FACF);
   border: unset;
   overflow: hidden;
@@ -4217,6 +4218,7 @@ footer::before {
   margin-bottom: 0;
 }
 .expertise .accordion-button {
+  position: initial;
   transition: padding 0.5s ease;
   overflow: hidden;
   box-shadow: unset;
@@ -4246,6 +4248,9 @@ footer::before {
 }
 .expertise .accordion-button:not(.collapsed) .loading + li {
   display: block;
+}
+.expertise .accordion-button:not(.collapsed)::after {
+  transform: translateY(-51%) rotate(-180deg) !important;
 }
 .expertise .accordion-button div, .expertise .accordion-body div {
   width: 43.58%;
@@ -4281,6 +4286,12 @@ footer::before {
   font-size: 18px;
   font-weight: 400;
   line-height: 28.8px;
+}
+.expertise .accordion-button::after {
+  top: 50%;
+  position: absolute;
+  right: 24px;
+  transform: translateY(-50%);
 }
 
 .careerApply {
@@ -4837,6 +4848,12 @@ footer::before {
 }
 @media (min-width: 992px) {
   .float-menu {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
     top: 75%;
   }
 }
