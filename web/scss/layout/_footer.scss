@@ -70,7 +70,10 @@ footer{
         }
         ul{
             @include min(768){
-                column-count: 2;
+                // column-count: 2;
+                display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
             }
         }
         li{
