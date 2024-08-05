@@ -3897,6 +3897,7 @@ footer::before {
 }
 .theme-tab .nav .btn {
   padding: 0px 10px;
+  color: #979A9C;
 }
 @media (min-width: 576px) {
   .theme-tab .nav .btn {
@@ -4828,6 +4829,7 @@ footer::before {
 }
 
 .float-menu {
+  opacity: 0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -4852,6 +4854,14 @@ footer::before {
   .float-menu {
     top: 88%;
   }
+}
+.float-menu.opacity-one {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.float-menu.opacity-zero {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .float-menu button, .float-menu a {
   display: block;
@@ -5309,7 +5319,6 @@ footer::before {
   justify-content: center;
   border-radius: 8px;
   height: 40px;
-  color: #979A9C;
 }
 @media (min-width: 768px) {
   .btn.planBtn {

@@ -1861,6 +1861,8 @@ ul,.gradientBg {
     }
     .btn{
       padding: 0px 10px;
+      color: #979A9C;
+
       @include min(576){
         min-width: 160px;
       }

@@ -197,10 +197,24 @@ document.addEventListener("DOMContentLoaded", function() {var lazyImages = docum
 
 // ======================Scroll Top ===============================
 
-let mybutton = document.getElementById("scrollBtn");
 
+let mybutton = document.getElementById("scrollBtn");
+let floatMenu = document.querySelector(".float-menu");
+
+// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    floatMenu.classList.add("opacity-one");
+    floatMenu.classList.remove("opacity-zero");
+  } else {
+    floatMenu.classList.add("opacity-zero");
+    floatMenu.classList.remove("opacity-one");
+  }
+}
+
+// Add an event listener to the button to scroll to the top
 mybutton.addEventListener('click', function() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
