@@ -31,8 +31,8 @@ $(document).ready(function () {
     arrows: false,
     autoplay: true,
     speed: 200,
-    draggable: false,
-    swipeToSlide: false,
+    // draggable: false,
+    // swipeToSlide: false,
     cssEase: 'linear',
     responsive: [
     
