@@ -1961,17 +1961,7 @@ ul,.gradientBg {
       //   border: 1px solid #343E4E;
       //   transition: border 0.5s ease;
       // }
-      &::before{
-        @extend .position;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        border: 1px solid #fff;
-        left: 0;
-        transition:  1s ease all;
-        opacity: 0;
-        
-      }
+ 
       &:hover,&.active{
         &::before{
           opacity: 1;

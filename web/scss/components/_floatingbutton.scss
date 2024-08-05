@@ -1,5 +1,4 @@
 .float-menu{
-    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -102,8 +101,41 @@
         }
     }
     .hire-btn{
+    transition:  0.5s ease all ;
+    &::before,&::after{
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 0;
+      @extend .position;
+      height: 100%;
+      left: 0;
+      transition:  0.5s ease all ;
+    }
+    &::before{
+      width: 100%;
+      background: linear-gradient(90deg, #3412E0 0%, #7928E5 47.91%, #07B4CC 100%);
+      z-index: -1;
+      border-radius: 8px;
+      
+    }
+    &::after{
+      width: 0%;
+      z-index: -1;
+      background: linear-gradient(90deg, #3412E0 100%, #7928E5 100%, #07B4CC 0%);
+      border-radius: 8px;
+
+    }
+    &:hover{
+      transition:  0.5s ease all ;
+
+      &::after{
+        transition:  0.5s ease all ;
+
+        width: 100%;
+      }
+    }
         min-width: 85px;
-        background: linear-gradient(90deg, #3412E0 0%, #7928E5 44%, #07B4CC 100%);
+        
         @include min(768){
             min-width: 101px;
         }

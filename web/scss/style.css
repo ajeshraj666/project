@@ -117,7 +117,7 @@ a {
   }
 }
 
-.position, .btn.blogBtn::before, .btn.themeBtn.bg-white::before, .btn.themeBtn.border-btn::before, .btn.planBtnBorder::after, .btn.bgWhite::after, .btn.bgWhite::before, .btn.bgTheme::before, .btn.bgTheme::after, .home-blog .load-btn::before, .home-blog .load-btn::after, .faq .nav .btn::before, .theme-tab .nav .btn::before, .clients .testimonialBox > p::after, .plans .d-flex li::before, .plans::before, .services .gradientBg a::before, .box::before, .banner-text-item span::before, .footer-top .social a::before, footer::before, .header-row .drop-downs > a::after, .header-row .btn::before, .header-row ul li .has-sub-menu > a::after, .header-row ul li .mega > ul > li > a::before, .list > ul li::before, .details ul li::before {
+.position, .btn.blogBtn::before, .btn.themeBtn.bg-white::before, .btn.themeBtn.border-btn::before, .btn.planBtnBorder::after, .btn.bgWhite::after, .btn.bgWhite::before, .btn.bgTheme::before, .btn.bgTheme::after, .float-menu .hire-btn::before, .float-menu .hire-btn::after, .home-blog .load-btn::before, .home-blog .load-btn::after, .theme-tab .nav .btn::before, .clients .testimonialBox > p::after, .plans .d-flex li::before, .plans::before, .services .gradientBg a::before, .box::before, .banner-text-item span::before, .footer-top .social a::before, footer::before, .header-row .drop-downs > a::after, .header-row .btn::before, .header-row ul li .has-sub-menu > a::after, .header-row ul li .mega > ul > li > a::before, .list > ul li::before, .details ul li::before {
   content: "";
   position: absolute;
 }
@@ -4012,15 +4012,6 @@ footer::before {
     min-width: 278px;
   }
 }
-.faq .nav .btn::before {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  border: 1px solid #fff;
-  left: 0;
-  transition: 1s ease all;
-  opacity: 0;
-}
 .faq .nav .btn:hover::before, .faq .nav .btn.active::before {
   opacity: 1;
   transition: 1s ease all;
@@ -4729,7 +4720,6 @@ footer::before {
 }
 
 .float-menu {
-  display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -4857,8 +4847,35 @@ footer::before {
   border: 1px solid #fff;
 }
 .float-menu .hire-btn {
+  transition: 0.5s ease all;
   min-width: 85px;
-  background: linear-gradient(90deg, #3412E0 0%, #7928E5 44%, #07B4CC 100%);
+}
+.float-menu .hire-btn::before, .float-menu .hire-btn::after {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  height: 100%;
+  left: 0;
+  transition: 0.5s ease all;
+}
+.float-menu .hire-btn::before {
+  width: 100%;
+  background: linear-gradient(90deg, #3412E0 0%, #7928E5 47.91%, #07B4CC 100%);
+  z-index: -1;
+  border-radius: 8px;
+}
+.float-menu .hire-btn::after {
+  width: 0%;
+  z-index: -1;
+  background: linear-gradient(90deg, #3412E0 100%, #7928E5 100%, #07B4CC 0%);
+  border-radius: 8px;
+}
+.float-menu .hire-btn:hover {
+  transition: 0.5s ease all;
+}
+.float-menu .hire-btn:hover::after {
+  transition: 0.5s ease all;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .float-menu .hire-btn {
@@ -5184,6 +5201,7 @@ footer::before {
   justify-content: center;
   border-radius: 8px;
   height: 40px;
+  color: #979A9C;
 }
 @media (min-width: 768px) {
   .btn.planBtn {
@@ -5207,7 +5225,13 @@ footer::before {
   transform: translateY(-50%);
   border: 1px solid white;
 }
-.btn.planBtnBorder:hover, .btn.planBtnBorder.active {
+.btn.planBtnBorder:hover {
+  color: #fff;
+}
+.btn.planBtnBorder:hover::after {
+  border: 1px solid white;
+}
+.btn.planBtnBorder.active {
   background-color: #fff;
   color: #000;
 }
