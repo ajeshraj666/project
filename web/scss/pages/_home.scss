@@ -1846,10 +1846,8 @@ ul,.gradientBg {
     @extend .head-mb-40;
   }
   .nav {
-    gap: 5px;
-    @include min(768){
-      gap: 10px;
-    }
+    gap: 10px;
+   
     @include min(992){
       gap: 12px;
     }
@@ -2102,15 +2100,31 @@ ul,.gradientBg {
 // ===============================FAQ Section End====================================
 // ===============================expertise Section Start============================
 .expertise{
-  @include max(767){
-    display: none;
-  }
+  &.theme-tab .nav .btn {
+   @include min-max(1440,1599){
+    min-width: 257px;
+   }
+}
+
   .tab-content {
     margin: auto;
-    width: 86.496%;
+    width: 100%;
+    @include min(768){
+      width: 86.496%;
+
+    }
+    @include min(1600){
+      width: 77.496%;
+
+    }
+    @include min(1900){
+      width: 70.496%;
+
+    }
 }
 .accordion-button::after{
   background:   url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="url(%23paint0_linear_807_5594)"/><defs><linearGradient id="paint0_linear_807_5594" x1="14.4269" y1="16.0068" x2="14.415" y2="7.98598" gradientUnits="userSpaceOnUse"><stop offset="0.0709" stop-color="%23A2FACF"/><stop offset="0.9661" stop-color="%2364ACFF"/></linearGradient></defs></svg>');
+  background-size: cover;
 }
   .accordion-button ,.accordion-body{
     background: #1f2329;
@@ -2135,20 +2149,59 @@ ul,.gradientBg {
   }
 }
 .accordion-button {
-  position: initial;
+
   transition: padding 0.5s ease;
   overflow: hidden;
   box-shadow: unset;
-  padding: 24px;
+  padding: 10px;
+  @include max(767){
+    flex-wrap: wrap;
+  }
+  @include min(768){
+    position: initial;
+    padding: 14px;
+  }
+  @include min(992){
+    padding: 20px;
+  }
+  @include min(1200){
+    padding: 22px;
+  }
+  @include min(1440){
+    padding: 24px;
+  }
+  @include min(1600){
+    padding: 26px;
+  }
+  @include min(1900){
+    padding: 28px;
+  }
   &.collapsed{
     border-radius: 16px!important;
       
 }
   div{
     font-family: $secondary-font;
-    font-size: 20px;
     font-weight: 700;
-    line-height:  32px;
+    font-size: 15px;
+    line-height:  20px;
+    @include min(992){
+      font-size: 18px;
+      line-height:  28px;
+    }
+    @include min(1200){
+      font-size: 19px;
+      line-height:  30px;
+    }
+    @include min(1440){
+      font-size: 20px;
+      line-height:  32px;
+    }
+    @include min(1600){
+      font-size: 22px;
+      line-height:  36px;
+    }
+  
   }
   .loading{
     + li{
@@ -2170,53 +2223,210 @@ ul,.gradientBg {
     }
   }
   &::after{
-    transform: translateY(-51%) rotate(-180deg) !important;
+
+      transform: translateY(-51%) rotate(-180deg) !important;
+    
   }
 }
 .accordion-button,.accordion-body{
   div{
-    width: 43.58%;
+    width: 100%;
+  
+    @include min(768){
+      width: 43.58%;
+    }
+  }
+}
+.accordion-button div{
+  @include max(767){
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+}
+.accordion-body div{
+  @include max(767){
+    margin-top: 15px;
   }
 }
 .accordion-button,.accordion-body{
   ul{
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    width: 52.53%;
+    gap: 6px;
+    width: 100%;
+    @include min(768){
+      padding-left: 10px;
+      gap: 6px;
+      width: 64.53%;
+      padding-left: 10px;
+    }
+    @include min(992){
+      width: 52.53%;
+      gap: 8px;
+      padding-left: 15px;
+    }
+    @include min(1200){
+      gap: 12px;
+      padding-left: 30px;
+    }
+    @include min(1280){
+      gap: 14px;
+      padding-left: 38px;
+    }
+    @include min(1440){
+      gap: 16px;
+      padding-left: 40px;
+    }
+    @include min(1600){
+      padding-left: 45px;
+      gap: 17px;
+    }
+    @include min(1900){
+      gap: 18px;
+      padding-left: 50px;
+    }
     li{
       display: flex;
-      gap: 10px;
       align-items: center;
       justify-content: center;
-      height: 48px;
-      border-radius: 24px;
       background: #242931;
       backdrop-filter: blur(6px);
-      padding: 8px 24px;
+      border-radius: 15px;
+      gap: 4px;
+      height: 32px;
+      padding: 2px 10px;
+      @include min(768){
+        gap: 6px;
+        height: 40px;
+        padding: 4px 11px;
+      }
+      @include min(992){
+        border-radius: 24px;
+        gap: 7px;
+        height: 40px;
+        padding: 5px 13px;
+      }
+      @include min(1200){
+        gap: 8px;
+        height: 46px;
+        padding: 6px 20px;
+      }
+      @include min(1440){
+        gap: 10px;
+        height: 48px;
+        padding: 8px 24px;
+      }
+      @include min(1600){
+        gap: 12px;
+        height: 50px;
+        padding: 10px 24px;
+      }
+    }
+    img{
+      width: 18px;
+      height: auto;
+      @include min(768){
+        width: 15px;
+      }
+      @include min(992){
+        width: 24px;
+      }
+      @include min(1200){
+        width: 26px;
+      }
+      @include min(1440){
+        width: 28px;
+      }
+      @include min(1600){
+        width: 30px;
+      }
     }
   }
 }
 .accordion-body {
   display: flex;
-  padding: 16px 24px 24px 24px;
   border-radius:  0px 0px 16px 16px;
   overflow: hidden;
+  padding: 10px;
+  @include max(767){
+    flex-wrap: wrap;
+  }
+  @include min(768){
+    padding: 10px 18px 18px 18px;
+  }
+  @include min(992){
+    padding: 12px 20px 20px 20px;
+  }
+  @include min(1200){
+    padding: 14px 22px 22px 22px;
+  }
+  @include min(1440){
+    padding: 16px 24px 24px 24px;
+  }
+  @include min(1600){
+    padding: 18px 26px 26px 26px;
+  }
   div{
-    margin-top: -16px;
+    @include max(767){
+      order: 1;
+    }
+    @include min(768){
+      margin-top: -12px;
+    }
+    @include min(992){
+      margin-top: -14px;
+    }
+    @include min(1200){
+      margin-top: -15px;
+    }
+    @include min(1440){
+      margin-top: -16px;
+    }
+    @include min(1600){
+      margin-top: -17px;
+    }
   }
   div,p{
-    font-size: 18px;
     font-weight: 400;
-    line-height:28.8px;
+    font-size: 14px;
+    line-height:20.8px;
+
+    @include min(768){
+      font-size: 14px;
+      line-height:20.8px;
+    }
+
+    @include min(992){
+      font-size: 16px;
+      line-height:24.8px;
+    }
+    @include min(1200){
+      font-size: 17px;
+      line-height:26.8px;
+    }
+    @include min(1440){
+      font-size: 18px;
+      line-height:28.8px;
+    }
+    @include min(1600){
+      font-size: 19px;
+      line-height:30px;
+    }
   }
 }
 
 .accordion-button::after {
+
   top: 50%;
   position: absolute;
-  right: 24px;
+  right: 12px;
   transform: translateY(-50%);
+  @include min(768){
+    right: 24px;
+
+  }
+ 
 }
 }
 

@@ -218,3 +218,54 @@ function scrollFunction() {
 mybutton.addEventListener('click', function() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
+
+
+// Home Page Contact form validation
+document.getElementById('contact-form-wrapper').addEventListener('submit', function(event) {
+  let valid = true;
+
+  // Validate email
+  const email = document.getElementById('email');
+  const emailError = document.getElementById('emailError');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email.value)) {
+    email.classList.add('error');
+    emailError.style.display = 'block';
+    valid = false;
+  } else {
+    email.classList.remove('error');
+    emailError.style.display = 'none';
+  }
+
+  // Validate name
+  const name = document.getElementById('name');
+  const nameError = document.getElementById('nameError');
+
+  if (name.value.trim() === '') {
+    name.classList.add('error');
+    nameError.style.display = 'block';
+    valid = false;
+  } else {
+    name.classList.remove('error');
+    nameError.style.display = 'none';
+  }
+
+  // Validate message
+  const message = document.getElementById('message');
+  const messageError = document.getElementById('messageError');
+
+  if (message.value.trim() === '') {
+    message.classList.add('error');
+    messageError.style.display = 'block';
+    valid = false;
+  } else {
+    message.classList.remove('error');
+    messageError.style.display = 'none';
+  }
+
+  // If any field is invalid, prevent form submission
+  if (!valid) {
+    event.preventDefault();
+  }
+});
