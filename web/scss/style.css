@@ -691,6 +691,17 @@ nav a:hover .rolling-text .letter, .quick-links a:hover .rolling-text .letter {
   transition-delay: 0.3s;
 }
 
+#fadeSection {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* Class to change opacity to 1 */
+.visible {
+  opacity: 1 !important;
+  transition: opacity 1s ease-in-out;
+}
+
 @media (min-width: 1440px) {
   .brand {
     min-width: 83px;

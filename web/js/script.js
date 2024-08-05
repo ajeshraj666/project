@@ -5,6 +5,12 @@ window.addEventListener('resize', function() {
 });
 
 
+window.addEventListener('load', function() {
+  // Add the 'visible' class to the section
+  document.getElementById('fadeSection').classList.add('visible');
+});
+
+
 
 
 // Banner Slider
