@@ -2117,41 +2117,43 @@ ul,.gradientBg {
       width: 77.496%;
 
     }
-    @include min(1900){
-      width: 70.496%;
-
-    }
+  
 }
 .accordion-button::after{
   background:   url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="url(%23paint0_linear_807_5594)"/><defs><linearGradient id="paint0_linear_807_5594" x1="14.4269" y1="16.0068" x2="14.415" y2="7.98598" gradientUnits="userSpaceOnUse"><stop offset="0.0709" stop-color="%23A2FACF"/><stop offset="0.9661" stop-color="%2364ACFF"/></linearGradient></defs></svg>');
   background-size: cover;
 }
   .accordion-button ,.accordion-body{
-    background: #1f2329;
+    // background: #1f2329;
 }
 .accordion-button:not(.collapsed){
   // border-radius: 16px 16px 0px 0px;
 }
 .accordion-header {
-  border-radius: 16px 16px 0px 0px;
-  overflow: hidden;
+  // border-radius: 16px 16px 0px 0px;
+  // overflow: hidden;
 }
 .accordion-item {
+  background: unset;
   position: relative;
-  background: linear-gradient(to right, #64ACFF, #A2FACF);
   border: unset;
-  overflow: hidden;
-  padding: 1px;
-  border-radius: 16px!important;
+  // background: linear-gradient(to right, #64ACFF, #A2FACF);
+  // border: unset;
+  // overflow: hidden;
+  // padding: 1px;
+  // border-radius: 16px!important;
+  background: linear-gradient(#1f2329, #1f2329) padding-box, linear-gradient(to right, #64ACFF, #A2FACF) border-box;
+    border-radius: 16px;
+    border: 1px solid transparent!important;
   margin-bottom: 24px;
   &:last-child{
     margin-bottom: 0;
   }
 }
 .accordion-button {
-
+  background: unset;
   transition: padding 0.5s ease;
-  overflow: hidden;
+  // overflow: hidden;
   box-shadow: unset;
   padding: 10px;
   @include max(767){
@@ -2173,11 +2175,9 @@ ul,.gradientBg {
   @include min(1600){
     padding: 26px;
   }
-  @include min(1900){
-    padding: 28px;
-  }
+
   &.collapsed{
-    border-radius: 16px!important;
+    // border-radius: 16px!important;
       
 }
   div{
@@ -2210,7 +2210,7 @@ ul,.gradientBg {
   }
 }
 .accordion-button:not(.collapsed){
-  border-radius: 0px!important;
+  // border-radius: 0px!important;
   padding-bottom: 0;
   // transition: padding 0.5s ease;
   div{
@@ -2282,10 +2282,7 @@ ul,.gradientBg {
       padding-left: 45px;
       gap: 17px;
     }
-    @include min(1900){
-      gap: 18px;
-      padding-left: 50px;
-    }
+
     li{
       display: flex;
       align-items: center;
@@ -2318,7 +2315,7 @@ ul,.gradientBg {
         padding: 8px 24px;
       }
       @include min(1600){
-        gap: 12px;
+        gap: 11px;
         height: 50px;
         padding: 10px 24px;
       }
@@ -2339,7 +2336,7 @@ ul,.gradientBg {
         width: 28px;
       }
       @include min(1600){
-        width: 30px;
+        width: 29px;
       }
     }
   }
