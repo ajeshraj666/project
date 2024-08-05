@@ -4174,6 +4174,103 @@ footer::before {
   animation: gradientLine 1s linear infinite;
 }
 
+@media (max-width: 767px) {
+  .expertise {
+    display: none;
+  }
+}
+.expertise .tab-content {
+  margin: auto;
+  width: 86.496%;
+}
+.expertise .accordion-button::after {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 8.29289C4.90237 8.68342 4.90237 9.31658 5.29289 9.70711L11.2929 15.7071C11.6834 16.0976 12.3166 16.0976 12.7071 15.7071L18.7071 9.70711C19.0976 9.31658 19.0976 8.68342 18.7071 8.29289C18.3166 7.90237 17.6834 7.90237 17.2929 8.29289L12 13.5858L6.70711 8.29289C6.31658 7.90237 5.68342 7.90237 5.29289 8.29289Z" fill="url(%23paint0_linear_807_5594)"/><defs><linearGradient id="paint0_linear_807_5594" x1="14.4269" y1="16.0068" x2="14.415" y2="7.98598" gradientUnits="userSpaceOnUse"><stop offset="0.0709" stop-color="%23A2FACF"/><stop offset="0.9661" stop-color="%2364ACFF"/></linearGradient></defs></svg>');
+}
+.expertise .accordion-button, .expertise .accordion-body {
+  background: #1f2329;
+}
+.expertise .accordion-header {
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+}
+.expertise .accordion-item {
+  background: linear-gradient(to right, #64ACFF, #A2FACF);
+  border: unset;
+  overflow: hidden;
+  padding: 1px;
+  border-radius: 16px !important;
+  margin-bottom: 24px;
+}
+.expertise .accordion-item:last-child {
+  margin-bottom: 0;
+}
+.expertise .accordion-button {
+  transition: padding 0.5s ease;
+  overflow: hidden;
+  box-shadow: unset;
+  padding: 24px;
+}
+.expertise .accordion-button.collapsed {
+  border-radius: 16px !important;
+}
+.expertise .accordion-button div {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.expertise .accordion-button .loading + li {
+  display: none;
+}
+.expertise .accordion-button:not(.collapsed) {
+  border-radius: 0px !important;
+  padding-bottom: 0;
+}
+.expertise .accordion-button:not(.collapsed) div {
+  color: #79C0FF;
+}
+.expertise .accordion-button:not(.collapsed) .loading {
+  display: none;
+}
+.expertise .accordion-button:not(.collapsed) .loading + li {
+  display: block;
+}
+.expertise .accordion-button div, .expertise .accordion-body div {
+  width: 43.58%;
+}
+.expertise .accordion-button ul, .expertise .accordion-body ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 52.53%;
+}
+.expertise .accordion-button ul li, .expertise .accordion-body ul li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 24px;
+  background: #242931;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  padding: 8px 24px;
+}
+.expertise .accordion-body {
+  display: flex;
+  padding: 16px 24px 24px 24px;
+  border-radius: 0px 0px 16px 16px;
+  overflow: hidden;
+}
+.expertise .accordion-body div {
+  margin-top: -16px;
+}
+.expertise .accordion-body div, .expertise .accordion-body p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
 .careerApply {
   z-index: 99999999;
   background: rgba(255, 255, 255, 0.9);
