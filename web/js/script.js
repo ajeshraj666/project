@@ -1,8 +1,8 @@
-window.addEventListener('resize', function() {
-  if (window.innerWidth < 576 || window.innerWidth > 5753) {
-      location.reload();
-  }
-});
+// window.addEventListener('resize', function() {
+//   if (window.innerWidth < 576 || window.innerWidth > 5753) {
+//       location.reload();
+//   }
+// });
 
 
 window.addEventListener('load', function() {
