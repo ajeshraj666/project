@@ -1578,6 +1578,10 @@ footer::before {
   }
 }
 
+.footerBtn::before, .footer-top .btn::before {
+  border: unset !important;
+}
+
 .offcanvas {
   background: linear-gradient(180deg, #030304 0%, #21262D 100%);
 }
