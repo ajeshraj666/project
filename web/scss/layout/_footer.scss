@@ -72,7 +72,17 @@ footer{
             @include min(768){
                 // column-count: 2;
                 display: grid;
-      grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 0px 24px;
+            }
+            @include min(992){
+                gap: 0px 28px;
+            }
+            @include min(1200){
+                gap: 0px 30px;
+            }
+            @include min(1440){
+                gap: 0px 32px;
             }
         }
         li{

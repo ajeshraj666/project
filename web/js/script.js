@@ -3,18 +3,186 @@
 //       location.reload();
 //   }
 // });
+//GSAP
+let mm = gsap.matchMedia();
+mm.add("(min-width: 1200px)", () => {
 
+    gsap.from(".logoSection .container-logo,.logoSection p,.product  h2,.product  h2+p"
+, {
+  opacity: 0,
+  y: 150,
+  duration: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".logoSection,.product",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".plans .d-flex >div, .plans h2", {
+  opacity: 0,
+  y: 150,
+  duration: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".plans",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+
+gsap.from(".product-list-item", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  y: 100,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".product",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".our-speciality > div, .our-speciality i,.services ul li ", {
+  duration: 0.5,
+  //scale: 0,
+  opacity:0,
+  x: 100,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".our-speciality,.services .container-ctn",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".gradientBg", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  x: -100,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".services",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".expertise h2,.expertise .nav, .expertise .tab-content", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  x: -100,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".expertise",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+
+
+gsap.from(".clients .clients-testimonial", {
+  duration: 1.5,
+  scale: 0,
+  opacity:0,
+  scrollTrigger: {
+    trigger: ".clients",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".cta  video", {
+  duration: 1.5,
+  scale: 0,
+  opacity:0,
+  scrollTrigger: {
+    trigger: ".cta",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".cta .cta-container", {
+  duration: 2,
+  //scale: 0,
+  opacity:0,
+  y: 200,
+  scrollTrigger: {
+    trigger: ".cta",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".faq h2,.faq .faq-tab", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  y: 200,
+  scrollTrigger: {
+    trigger: ".faq",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".home-blog .d-flex,.home-blog article", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  y: 200,
+  stagger: 0.2,
+
+  scrollTrigger: {
+    trigger: ".home-blog",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".contact-form-content", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  x: -100,
+  scrollTrigger: {
+    trigger: ".contact-form",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+gsap.from(".contact-form form", {
+  duration: 1,
+  //scale: 0,
+  opacity:0,
+  x: 100,
+  scrollTrigger: {
+    trigger: ".contact-form",
+    scroller: 'body',
+    start: "top 50%",
+    end: "bottom 20%",
+  }
+});
+
+});
+//GSAP
+
+// Banner section fade
 
 window.addEventListener('load', function() {
   // Add the 'visible' class to the section
   document.getElementById('fadeSection').classList.add('visible');
 });
 
-
-
-
 // Banner Slider
-
 $(document).ready(function () {
   $(".bannerText").slick({
     slidesToShow: 1,
@@ -28,7 +196,6 @@ $(document).ready(function () {
 });
 
 // ===========what we do=====================
-
 $(document).ready(function () {
   $(".logoSlider").slick({
     slidesToShow: 5.2,
@@ -41,7 +208,6 @@ $(document).ready(function () {
     // swipeToSlide: false,
     cssEase: 'linear',
     responsive: [
-    
       {
         breakpoint: 991,
         settings: {
@@ -59,7 +225,7 @@ $(document).ready(function () {
   });
 });
 
-
+// ===========Product slider below 576=====================
 $(document).ready(function () {
   function initSlider() {
     if ($(window).width() <= 575) {
@@ -94,6 +260,9 @@ $(document).ready(function () {
   $(window).resize(function () {
     initSlider();
   });
+  // ===========Product slider end===============================
+
+  // ===========Testimonial slider below 576=====================
   function initTestimonialSlider() {
     if ($(window).width() <= 575) {
       if (!$(".clients-testimonial").hasClass("slick-initialized")) {
@@ -127,20 +296,9 @@ $(document).ready(function () {
     initTestimonialSlider();
   });
 });
+// ===========Testimonial sliderend=======================
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const video = document.querySelector('video');
-//   const observer = new IntersectionObserver(entries => {
-//       entries.forEach(entry => {
-//           if (entry.isIntersecting) {
-//               video.load();
-//               observer.disconnect();
-//           }
-//       });
-//   });
-//   observer.observe(video);
-// });
-
+// ============= Videp load ============================== 
 document.addEventListener("DOMContentLoaded", function() {
   const video = document.getElementById('videoBanner');
   if (video) {
@@ -167,8 +325,7 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(video2);
   }
 });
-
-
+// ======================Insert Icon==========================
 document.addEventListener('DOMContentLoaded', function() {
   const specialityDivs = document.querySelectorAll('.our-speciality > div');
   specialityDivs.forEach((div, index) => {
@@ -179,6 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+// ======================Insert Icon End==========================
 
 // ======================Coustomer Rating==========================
 $(document).ready(function () {
@@ -190,16 +348,16 @@ $(document).ready(function () {
     starShape: 'rounded',
   });
 });
+// ======================Coustomer Rating End========================
 
 // ======================Lazy Loading ===============================
-
 document.addEventListener("DOMContentLoaded", function() {var lazyImages = document.querySelectorAll("img[data-src][loading='lazy']");var lazyImageObserver = new IntersectionObserver(function(entries, observer) {entries.forEach(function(entry) {if (entry.isIntersecting) {var lazyImage = entry.target;lazyImage.src = lazyImage.dataset.src;lazyImage.alt = lazyImage.dataset.alt;lazyImage.removeAttribute("data-src");lazyImage.removeAttribute("loading");lazyImageObserver.unobserve(lazyImage);}});});lazyImages.forEach(function(lazyImage) {lazyImageObserver.observe(lazyImage);});});
+// ======================Lazy Loading End===============================
 
 // ======================Scroll Top ===============================
-
-
 let mybutton = document.getElementById("scrollBtn");
 let floatMenu = document.querySelector(".float-menu");
+// ======================Scroll Top End===============================
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -213,12 +371,10 @@ function scrollFunction() {
     floatMenu.classList.remove("opacity-one");
   }
 }
-
-// Add an event listener to the button to scroll to the top
 mybutton.addEventListener('click', function() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
-
+//==================Scroll Top End===============
 
 // Home Page Contact form validation
 document.getElementById('contact-form-wrapper').addEventListener('submit', function(event) {
@@ -263,7 +419,6 @@ document.getElementById('contact-form-wrapper').addEventListener('submit', funct
     message.classList.remove('error');
     messageError.style.display = 'none';
   }
-
   // If any field is invalid, prevent form submission
   if (!valid) {
     event.preventDefault();

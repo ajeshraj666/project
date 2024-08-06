@@ -2148,6 +2148,8 @@ ul,.gradientBg {
   background: linear-gradient(#1f2329, #1f2329) padding-box, linear-gradient(to right, #64ACFF, #A2FACF) border-box;
     border-radius: 16px;
     border: 1px solid transparent!important;
+    animation: gradientBox 1s linear infinite;
+    background-size: 200% 200%; 
   margin-bottom: 24px;
   &:last-child{
     margin-bottom: 0;
@@ -2298,13 +2300,13 @@ ul,.gradientBg {
       padding: 2px 10px;
       @include min(768){
         gap: 6px;
-        height: 40px;
+        height: 36px;
         padding: 4px 11px;
       }
       @include min(992){
         border-radius: 24px;
         gap: 7px;
-        height: 40px;
+        height: 38px;
         padding: 5px 13px;
       }
       @include min(1200){
