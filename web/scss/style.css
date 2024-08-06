@@ -117,7 +117,7 @@ a {
   }
 }
 
-.position, .btn.blogBtn::before, .btn.themeBtn.bg-white::before, .btn.themeBtn.border-btn::before, .btn.planBtnBorder::after, .btn.bgWhite::after, .btn.bgWhite::before, .btn.bgTheme::before, .btn.bgTheme::after, .float-menu .hire-btn::before, .float-menu .hire-btn::after, .home-blog .load-btn::before, .home-blog .load-btn::after, .theme-tab .nav .btn::before, .clients .testimonialBox > p::after, .plans .d-flex li::before, .plans::before, .services .gradientBg a::before, .box::before, .banner-text-item span::before, .footer-top .social a::before, footer::before, .header-row .drop-downs > a::after, .header-row .btn::before, .header-row ul li .has-sub-menu > a::after, .header-row ul li .mega > ul > li > a::before, .list > ul li::before, .details ul li::before {
+.position, .btn.blogBtn::before, .btn.themeBtn.bg-white::before, .btn.themeBtn.border-btn::before, .btn.planBtnBorder::after, .btn.bgWhite::after, .btn.bgWhite::before, .btn.bgTheme::before, .btn.bgTheme::after, .float-menu .hire-btn::before, .float-menu .hire-btn::after, .home-blog .load-btn::before, .home-blog .load-btn::after, .theme-tab .nav .btn::before, .clients .testimonialBox > p::after, .clients .testimonialBox .my-rating-readonly + div p::after, .plans .d-flex li::before, .plans::before, .services .gradientBg a::before, .box::before, .banner-text-item span::before, .footer-top .social a::before, footer::before, .header-row .drop-downs > a::after, .header-row .btn::before, .header-row ul li .has-sub-menu > a::after, .header-row ul li .mega > ul > li > a::before, .list > ul li::before, .details ul li::before {
   content: "";
   position: absolute;
 }
@@ -3337,7 +3337,6 @@ footer::before {
 }
 @media (max-width: 575px) {
   .clients .testimonialBox {
-    min-height: 420px;
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -3374,25 +3373,32 @@ footer::before {
     margin-bottom: 30px;
   }
 }
-.clients .testimonialBox > p {
+.clients .testimonialBox > p, .clients .testimonialBox .my-rating-readonly + div p {
   line-height: 27.36px;
   padding-bottom: 16px;
   margin-bottom: 16px;
   position: relative;
 }
 @media (min-width: 1900px) {
-  .clients .testimonialBox > p {
+  .clients .testimonialBox > p, .clients .testimonialBox .my-rating-readonly + div p {
     line-height: 33.36px;
     padding-bottom: 18px;
     margin-bottom: 18px;
   }
 }
-.clients .testimonialBox > p::after {
+.clients .testimonialBox > p::after, .clients .testimonialBox .my-rating-readonly + div p::after {
   height: 1px;
   width: 60px;
   bottom: 0;
   left: 0;
   background: #868686;
+}
+@media (max-width: 575px) {
+  .clients .testimonialBox .my-rating-readonly + div {
+    height: 140px;
+    overflow: auto;
+    padding-right: 10px;
+  }
 }
 .clients .testimonialBox .author p {
   color: #868686;
