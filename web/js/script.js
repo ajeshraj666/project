@@ -18,6 +18,7 @@ mm.add("(min-width: 1200px)", () => {
     scroller: 'body',
     start: "top 50%",
     end: "bottom 20%",
+    
   }
 });
 gsap.from(".plans .d-flex >div, .plans h2", {
@@ -53,7 +54,7 @@ gsap.from(".our-speciality > div, .our-speciality i,.services ul li ", {
   x: 100,
   stagger: 0.2,
   scrollTrigger: {
-    trigger: ".our-speciality,.services .container-ctn",
+    trigger: ".product,.services .container-ctn",
     scroller: 'body',
     start: "top 50%",
     end: "bottom 20%",
